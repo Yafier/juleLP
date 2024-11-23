@@ -60,7 +60,7 @@ export default function Solution() {
                   grading and student feedback.
                   <br /><br />
                   For students who needed to improve their language and public
-                  speaking skills, we've built an always-available AI-powered assistant
+                  speaking skills, we have built an always-available AI-powered assistant
                   that accepts voice by their needs.
                 </div>
               </div>

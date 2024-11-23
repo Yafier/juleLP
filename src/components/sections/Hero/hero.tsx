@@ -15,7 +15,7 @@ export default function Hero() {
               Let AI handle the workload.
             </h1>
             <p className="text-lg md:text-xl text-white mb-12 max-w-2xl px-4">
-              We are a team of AI experts empowering educators to unlock student potential
+              We're a team of AI experts empowering educators to unlock student potential
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-2 mb-12 w-full max-w-xl px-4">
               <input

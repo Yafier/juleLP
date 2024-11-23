@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="container mx-auto px-4 pb-0">
           <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white font-serif px-4">
-              Rahasia Mantan Karyawan.
+              Rahasia Mantan Karyawan
               <br />
               yang Kini Berpenghasilan
               <br />

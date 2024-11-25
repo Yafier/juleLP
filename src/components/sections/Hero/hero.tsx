@@ -1,8 +1,17 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation/navigation';
+import { useRouter } from 'next/navigation';
 
 export default function Hero() {
+  const router = useRouter();
+
+  const handleDaftar = () => {
+    router.push('/daftar');
+  };
+
   return (
     <>
       <Navigation />
@@ -26,8 +35,11 @@ export default function Hero() {
                 placeholder="Masukkan email kamu..."
                 className="flex-1 px-6 py-3 rounded-full bg-white/95 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-300 shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1)]"
               />
-              <button className="px-6 py-3 bg-blue-800 text-white rounded-full hover:bg-blue-900 transition-all hover:scale-105 shadow-[0_4px_8px_-2px_rgba(0,0,0,0.2)]">
-                Gabung Sekarang.
+              <button 
+                onClick={handleDaftar}
+                className="px-6 py-3 bg-blue-800 text-white rounded-full hover:bg-blue-900 transition-all hover:scale-105 shadow-[0_4px_8px_-2px_rgba(0,0,0,0.2)]"
+              >
+                Gabung Sekarang
               </button>
             </div>
             <div className="relative w-full max-w-3xl">

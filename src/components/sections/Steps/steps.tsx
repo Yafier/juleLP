@@ -109,7 +109,7 @@ export default function Steps() {
                           Month
                         </div>
                         <div className="text-5xl font-bold text-blue-600">
-                          {step.title.split(' ')[1]}
+                          {step.title.split('Month ')[1]}
                         </div>
                       </div>
                     </div>

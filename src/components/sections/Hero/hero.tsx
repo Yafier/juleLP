@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <>
       <Navigation />
-      <section className="min-h-screen flex items-end justify-center bg-gradient-to-bl from-blue-800 via-blue-500 to-white rounded-3xl mx-4 my-4">
+      <section className="min-h-screen flex items-end justify-center bg-gradient-to-bl from-blue-800 via-blue-500 to-white rounded-3xl mx-4 my-4 pt-16 md:pt-32">
         <div className="container mx-auto px-4 pb-0">
           <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white font-serif px-4 leading-tight">

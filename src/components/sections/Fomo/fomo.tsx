@@ -85,31 +85,31 @@ export default function Fomo() {
             <div className="flex size-full max-w-[1200px] max-h-[400px] items-stretch justify-between">
               {/* Left Side Group */}
               <div className="flex flex-col justify-between">
-                <Circle ref={topLeftRef} className="size-32 p-0.5">
+                <Circle ref={topLeftRef} className="size-20 md:size-32 p-0.5">
                   <Image src="/3.png" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
-                <Circle ref={middleLeftRef} className="size-32 p-0.5">
+                <Circle ref={middleLeftRef} className="size-20 md:size-32 p-0.5">
                   <Image src="/4.png" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
-                <Circle ref={bottomLeftRef} className="size-32 p-0.5">
+                <Circle ref={bottomLeftRef} className="size-20 md:size-32 p-0.5">
                   <Image src="/5.png" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
               </div>
 
               {/* Center Circle */}
-              <Circle ref={centerRef} className="size-40 flex items-center justify-center">
-                <span className="text-4xl font-bold text-blue-600">YOU</span>
+              <Circle ref={centerRef} className="size-24 md:size-40 flex items-center justify-center">
+                <span className="text-2xl md:text-4xl font-bold text-blue-600">YOU</span>
               </Circle>
 
               {/* Right Side Group */}
               <div className="flex flex-col justify-between">
-                <Circle ref={topRightRef} className="size-32 p-0.5">
+                <Circle ref={topRightRef} className="size-20 md:size-32 p-0.5">
                   <Image src="/6.png" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
-                <Circle ref={middleRightRef} className="size-32 p-0.5">
+                <Circle ref={middleRightRef} className="size-20 md:size-32 p-0.5">
                   <Image src="/7.png" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
-                <Circle ref={bottomRightRef} className="size-32 p-0.5">
+                <Circle ref={bottomRightRef} className="size-20 md:size-32 p-0.5">
                   <Image src="/8.png" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
               </div>
@@ -281,7 +281,7 @@ export default function Fomo() {
           </div>
 
           {/* Enhanced Limited Time Offer */}
-          <div className="relative max-w-6xl mx-auto pt-20">
+          <div className="relative max-w-6xl mx-auto pt-12 md:pt-20">
             {/* Background Image and Gradient */}
             <div className="absolute inset-0 rounded-3xl overflow-hidden">
               <Image
@@ -296,11 +296,11 @@ export default function Fomo() {
             {/* Enhanced Border Effect - Reversed gradient direction */}
             <div className="absolute inset-0 rounded-3xl p-[3px] bg-[linear-gradient(315deg,transparent_0%,transparent_50%,white/40_100%)]"></div>
 
-            {/* Small Notch Container - Special November Offer */}
-            <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[400px]">
+            {/* Small Notch Container - adjusted positioning */}
+            <div className="absolute -top-16 md:-top-20 left-1/2 -translate-x-1/2 w-[300px] md:w-[400px]">
               <div className="relative rounded-t-2xl p-[2px] bg-[linear-gradient(315deg,#1a365d_0%,#1e3a8a_100%)]">
                 <div className="relative rounded-t-2xl bg-white/10 backdrop-blur-sm">
-                  <div className="text-center text-2xl font-bold text-white truncate whitespace-nowrap py-6 px-8">
+                  <div className="text-center text-lg md:text-2xl font-bold text-white truncate whitespace-nowrap py-4 md:py-6 px-4 md:px-8">
                     Special November Offer
                   </div>
                   {/* Add inner border glow */}
@@ -309,41 +309,41 @@ export default function Fomo() {
               </div>
             </div>
 
-            {/* Main Card Content */}
-            <div className="relative rounded-3xl p-12 overflow-hidden">
-              {/* Header Section - Left Aligned */}
-              <div className="text-left mb-16">
+            {/* Main Card Content - adjusted top padding */}
+            <div className="relative rounded-3xl p-6 md:p-12 pt-8 md:pt-16 overflow-hidden">
+              {/* Header Section - Left Aligned - adjusted text sizes */}
+              <div className="text-left mb-8 md:mb-16">
                 <Image
                   src="/alife_logo.png"
                   alt="Logo"
-                  width={100}
-                  height={100}
-                  className="mb-8"
+                  width={80}
+                  height={80}
+                  className="mb-4 md:mb-8"
                 />
-                <h3 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight truncate">
+                <h3 className="text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-6 leading-tight">
                   Complete Business System
                 </h3>
-                <p className="text-2xl text-white/80 max-w-2xl">
+                <p className="text-base md:text-2xl text-white/80 max-w-2xl">
                   Get instant access to our proven system that has helped hundreds achieve financial freedom
                 </p>
               </div>
 
               {/* Points Grid - Updated sizes */}
-              <div className="grid grid-cols-2 gap-x-16 gap-y-8 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-4 md:gap-y-8 mb-8 md:mb-12">
                 {offerPoints.map((point, index) => (
-                  <div key={index} className="flex items-center gap-4">
-                    <div className="flex-none w-10 h-10 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center
+                  <div key={index} className="flex items-center gap-2 md:gap-4">
+                    <div className="flex-none w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center
                       shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] border border-blue-600/30">
-                      <CheckIcon className="w-6 h-6 text-white" />
+                      <CheckIcon className="w-4 h-4 md:w-6 md:h-6 text-white" />
                     </div>
-                    <span className="text-white text-2xl font-bold">{point.title}</span>
+                    <span className="text-white text-base md:text-2xl font-bold">{point.title}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Button and redirect text - removed Special November container */}
-              <button className="w-full bg-white text-2xl font-bold py-6 rounded-xl 
-                hover:bg-gray-50 transition-all hover:scale-[1.02] mb-4
+              {/* Button and redirect text */}
+              <button className="w-full bg-white text-xl md:text-2xl font-bold py-4 md:py-6 rounded-xl 
+                hover:bg-gray-50 transition-all hover:scale-[1.02] mb-3 md:mb-4
                 shadow-[0_8px_16px_rgba(59,130,246,0.3)]">
                 <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 
                   bg-clip-text text-transparent 
@@ -352,7 +352,7 @@ export default function Fomo() {
                 </span>
               </button>
               
-              <p className="text-white/80 text-center text-lg mb-4">
+              <p className="text-white/80 text-center text-base md:text-lg mb-2 md:mb-4">
                 Anda akan diarahkan ke platform member untuk menyelesaikan pendaftaran
               </p>
             </div>

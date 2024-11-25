@@ -81,14 +81,14 @@ export default function Steps() {
           </div>
 
           <div ref={containerRef} className="relative">
-            <div className="absolute left-[445px] top-0 bottom-[200px] w-1 bg-blue-100">
+            <div className="hidden md:block absolute left-[445px] top-0 bottom-[200px] w-1 bg-blue-100">
               <motion.div
                 className="absolute top-0 left-0 right-0 bottom-0 bg-blue-600 origin-top"
                 style={{ scaleY: scrollYProgress }}
               />
             </div>
 
-            <div className="space-y-64">
+            <div className="space-y-32 md:space-y-64">
               {steps.map((step, index) => (
                 <motion.div
                   key={index}
@@ -98,37 +98,37 @@ export default function Steps() {
                   transition={{ duration: 0.8 }}
                   className="relative"
                 >
-                  <div className="flex items-start">
-                    <div className="w-[400px] flex items-center gap-6">
-                      <div className="text-[12rem] font-bold leading-none bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent 
+                  <div className="flex flex-col md:flex-row md:items-start">
+                    <div className="w-full md:w-[400px] flex flex-col md:flex-row items-center md:items-center gap-6 mb-8 md:mb-0">
+                      <div className="text-8xl md:text-[12rem] font-bold leading-none bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent 
                         [text-shadow:_2px_2px_4px_rgba(0,0,0,0.2)]">
                         {step.number}
                       </div>
-                      <div className="mt-12">
-                        <div className="text-4xl font-bold text-blue-600/40 mb-2">
+                      <div className="text-center md:text-left md:mt-12">
+                        <div className="text-3xl md:text-4xl font-bold text-blue-600/40 mb-2">
                           Month
                         </div>
-                        <div className="text-5xl font-bold text-blue-600">
+                        <div className="text-4xl md:text-5xl font-bold text-blue-600">
                           {step.title.split('Month ')[1]}
                         </div>
                       </div>
                     </div>
 
-                    <div className="absolute left-[384px] flex items-center justify-center">
+                    <div className="hidden md:block absolute left-[384px] flex items-center justify-center">
                       <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 
                         shadow-[inset_0_0_20px_rgba(255,255,255,0.6)] flex items-center justify-center z-10">
                         <step.icon className="w-16 h-16 text-white/90" />
                       </div>
                     </div>
 
-                    <div className="flex-1 pl-48">
+                    <div className="flex-1 md:pl-48 px-4 md:px-0">
                       <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                       >
-                        <div className="grid grid-cols-2 gap-8 mb-12">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-12">
                           {step.images.map((image, imgIndex) => (
                             <div key={imgIndex} className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                               <Image
@@ -141,7 +141,7 @@ export default function Steps() {
                           ))}
                         </div>
 
-                        <p className="text-2xl text-blue-600/70 leading-relaxed">
+                        <p className="text-xl md:text-2xl text-blue-600/70 leading-relaxed">
                           {step.description}
                         </p>
                       </motion.div>
@@ -151,8 +151,8 @@ export default function Steps() {
               ))}
             </div>
 
-            <div className="text-center mt-32 relative z-10">
-              <button className="px-12 py-6 text-2xl font-semibold text-white rounded-full 
+            <div className="text-center mt-20 md:mt-32 relative z-10">
+              <button className="px-8 md:px-12 py-4 md:py-6 text-xl md:text-2xl font-semibold text-white rounded-full 
                 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 
                 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900
                 transition-all duration-300 hover:scale-105 

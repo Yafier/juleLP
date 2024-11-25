@@ -41,35 +41,35 @@ const faqItems: FaqItem[] = [
 
 export function Faq() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-left mb-12">
-            <div className="text-blue-600/80 text-xl mb-6 font-serif tracking-widest">/06</div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-blue-600 font-serif leading-snug tracking-tight">
+          {/* Header - adjusted spacing and text sizes for mobile */}
+          <div className="text-left mb-8 md:mb-12">
+            <div className="text-blue-600/80 text-lg md:text-xl mb-4 md:mb-6 font-serif tracking-widest">/06</div>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-blue-600 font-serif leading-snug tracking-tight">
               Frequently Asked
               <br />
               Questions
             </h2>
-            <p className="text-xl md:text-2xl text-blue-600/70 max-w-3xl font-light leading-relaxed">
+            <p className="text-lg md:text-2xl text-blue-600/70 max-w-3xl font-light leading-relaxed">
               Get answers to the most common questions about our program
             </p>
           </div>
 
-          {/* FAQ Accordion */}
-          <div className="mt-12">
-            <Accordion type="single" collapsible className="space-y-6">
+          {/* FAQ Accordion - adjusted padding and text sizes for mobile */}
+          <div className="mt-8 md:mt-12">
+            <Accordion type="single" collapsible className="space-y-4 md:space-y-6">
               {faqItems.map((item, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border border-blue-200/30 rounded-xl px-6 py-4 bg-blue-50/30"
+                  className="border border-blue-200/30 rounded-xl px-4 md:px-6 py-3 md:py-4 bg-blue-50/30"
                 >
-                  <AccordionTrigger className="text-xl font-semibold text-blue-800 hover:text-blue-600 transition-colors">
+                  <AccordionTrigger className="text-lg md:text-xl font-semibold text-blue-800 hover:text-blue-600 transition-colors">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-lg text-blue-600/70 leading-relaxed pt-4">
+                  <AccordionContent className="text-base md:text-lg text-blue-600/70 leading-relaxed pt-3 md:pt-4">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -77,12 +77,12 @@ export function Faq() {
             </Accordion>
           </div>
 
-          {/* Bottom CTA */}
-          <div className="mt-16 text-center">
-            <p className="text-2xl text-blue-600/70 mb-8">
+          {/* Bottom CTA - adjusted spacing and text sizes for mobile */}
+          <div className="mt-12 md:mt-16 text-center">
+            <p className="text-xl md:text-2xl text-blue-600/70 mb-6 md:mb-8">
               Still have questions? We&apos;re here to help!
             </p>
-            <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors">
+            <button className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors">
               Contact Us
             </button>
           </div>

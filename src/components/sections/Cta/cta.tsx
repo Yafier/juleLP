@@ -12,7 +12,7 @@ interface Quote {
 const quotes: Quote[] = [
   {
     text: "The only difference between where you are and where you want to be is the actions you take today.",
-    author: "Iman Gadzhi",
+    author: "Iman",
     role: "Founder, IAG Media"
   }
 ];

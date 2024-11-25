@@ -68,7 +68,7 @@ export default function Fomo() {
           <div className="text-left mb-12">
             <div className="text-blue-600/80 text-xl mb-6 font-serif tracking-widest">/05</div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-blue-600 font-serif leading-snug tracking-tight">
-              Here's What You Get Inside
+              Here&apos;s What You Get Inside
               <br />
               Our Community
             </h2>

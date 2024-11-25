@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 export default function Problem() {
   return (
@@ -51,14 +50,14 @@ export default function Problem() {
 
           <div className="max-w-3xl mx-auto mb-16">
             <blockquote className="text-xl md:text-2xl text-blue-600/70 leading-relaxed italic">
-              "Most people fail in life not because they aim too high and miss, but because they aim too low and hit."
+              &ldquo;Most people fail in life not because they aim too high and miss, but because they aim too low and hit.&rdquo;
               <span className="block text-lg mt-4 font-semibold">- Iman Gadzhi</span>
             </blockquote>
           </div>
 
           <div className="relative w-full mb-10">
             <h3 className="text-2xl md:text-3xl text-blue-800 font-bold mb-6">
-              But here's the good news...
+              But here&apos;s the good news...
             </h3>
             <p className="text-lg md:text-xl text-blue-600/70 max-w-2xl mx-auto leading-relaxed">
               Ada cara untuk break free dari cycle ini. Sistem yang sudah proven works untuk ratusan orang seperti kamu yang ingin escape dari rat race.

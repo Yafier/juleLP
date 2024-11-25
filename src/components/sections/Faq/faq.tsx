@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -20,7 +19,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "Berapa waktu yang dibutuhkan untuk melihat hasil?",
-    answer: "Here's the truth: Hasil setiap orang berbeda-beda, tergantung dedication dan action yang diambil. Tapi rata-rata member kami mulai melihat breakthrough dalam 3-6 bulan pertama. Remember what Andrew Tate says: 'Success is not about motivation, it's about dedication.' Yang pasti, sistem yang kami ajarkan adalah proven system yang sudah menghasilkan ratusan success stories! 💪"
+    answer: "Here&apos;s the truth: Hasil setiap orang berbeda-beda, tergantung dedication dan action yang diambil. Tapi rata-rata member kami mulai melihat breakthrough dalam 3-6 bulan pertama. Remember what Andrew Tate says: 'Success is not about motivation, it&apos;s about dedication.' Yang pasti, sistem yang kami ajarkan adalah proven system yang sudah menghasilkan ratusan success stories! 💪"
   },
   {
     question: "Apakah ada garansi keberhasilan?",
@@ -36,7 +35,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "Apa yang membedakan program ini dengan yang lain?",
-    answer: "Straight facts: Kami bukan cuma kasih theory, tapi actual blueprint yang sudah proven works! Plus, kamu dapat:\n\n• Real-time support dari successful mentors\n• Access ke private network high-level entrepreneurs\n• Weekly live sessions untuk accelerate progress\n• Exclusive tools & templates worth 150jt+\n\nThis is not just a course, it's your complete business system! 🚀"
+    answer: "Straight facts: Kami bukan cuma kasih theory, tapi actual blueprint yang sudah proven works! Plus, kamu dapat:\n\n• Real-time support dari successful mentors\n• Access ke private network high-level entrepreneurs\n• Weekly live sessions untuk accelerate progress\n• Exclusive tools & templates worth 150jt+\n\nThis is not just a course, it&apos;s your complete business system! 🚀"
   }
 ];
 
@@ -81,7 +80,7 @@ export function Faq() {
           {/* Bottom CTA */}
           <div className="mt-16 text-center">
             <p className="text-2xl text-blue-600/70 mb-8">
-              Still have questions? We're here to help!
+              Still have questions? We&apos;re here to help!
             </p>
             <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors">
               Contact Us

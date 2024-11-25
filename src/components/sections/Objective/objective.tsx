@@ -26,8 +26,8 @@ export default function Objective() {
                 </h3>
                 <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
                   <p>
-                    "Rahasia sukses yang jarang dibicarakan: Kenapa orang dengan skill biasa-biasa aja 
-                    bisa jauh lebih sukses dari mereka yang punya skill tinggi?"
+                    &ldquo;Rahasia sukses yang jarang dibicarakan: Kenapa orang dengan skill biasa-biasa aja 
+                    bisa jauh lebih sukses dari mereka yang punya skill tinggi?&rdquo;
                   </p>
                   <p className="pl-6 border-l-4 border-blue-400/30">
                     • Psychology of Success yang akan mengubah cara pandangmu
@@ -65,8 +65,8 @@ export default function Objective() {
                 </h3>
                 <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
                   <p>
-                    "Bagaimana cara menjual tanpa terkesan 'menjual'? Rahasia komunikasi yang membuat 
-                    orang tertarik tanpa merasa dipaksa."
+                    &ldquo;Bagaimana cara menjual tanpa terkesan &lsquo;menjual&rsquo;? Rahasia komunikasi yang membuat 
+                    orang tertarik tanpa merasa dipaksa.&rdquo;
                   </p>
                   <p className="pl-6 border-l-4 border-blue-400/30">
                     • Natural Selling Technique yang terbukti efektif
@@ -86,8 +86,8 @@ export default function Objective() {
                 </h3>
                 <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
                   <p>
-                    "Mengapa fokus pada uang justru menjauhkanmu dari kekayaan? Discover the real purpose 
-                    that drives sustainable success."
+                    &ldquo;Mengapa fokus pada uang justru menjauhkanmu dari kekayaan? Discover the real purpose 
+                    that drives sustainable success.&rdquo;
                   </p>
                   <p className="pl-6 border-l-4 border-blue-400/30">
                     • Purpose-driven Business Framework
@@ -125,11 +125,11 @@ export default function Objective() {
                 </h3>
                 <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
                   <p>
-                    "Kenapa kata-kata 'Aku sudah cukup dengan apa yang aku punya' justru jadi racun 
-                    yang membunuh potensialmu perlahan-lahan?"
+                    &ldquo;Kenapa kata-kata &lsquo;Aku sudah cukup dengan apa yang aku punya&rsquo; justru jadi racun 
+                    yang membunuh potensialmu perlahan-lahan?&rdquo;
                   </p>
                   <p className="pl-6 border-l-4 border-blue-400/30">
-                    • Why settling for "cukup" is the biggest trap
+                    • Why settling for &ldquo;cukup&rdquo; is the biggest trap
                     <br />
                     • Mengapa hidup biasa-biasa aja adalah pilihan terburuk
                     <br />
@@ -146,8 +146,8 @@ export default function Objective() {
                 </h3>
                 <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
                   <p>
-                    "3 Bulan. That's all it takes. Dari 0 sampai closing pertamamu. 
-                    Dan setelah itu? The sky is the limit!"
+                    &ldquo;3 Bulan. That&apos;s all it takes. Dari 0 sampai closing pertamamu. 
+                    Dan setelah itu? The sky is the limit!&rdquo;
                   </p>
                   <p className="pl-6 border-l-4 border-blue-400/30">
                     • Proven system untuk closing pertamamu

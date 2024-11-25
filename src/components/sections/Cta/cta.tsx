@@ -43,7 +43,7 @@ export function Cta() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="absolute -left-8 -top-8 text-8xl text-blue-200 font-serif">"</div>
+                <div className="absolute -left-8 -top-8 text-8xl text-blue-200 font-serif">&ldquo;</div>
                 <blockquote className="relative z-10">
                   <p className="text-2xl md:text-3xl text-blue-800 font-light leading-relaxed mb-6">
                     {quotes[0].text}

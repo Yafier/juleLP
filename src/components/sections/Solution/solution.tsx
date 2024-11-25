@@ -69,9 +69,9 @@ export default function Solution() {
                 </div>
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="text-blue-600/70 text-xl leading-relaxed max-w-3xl font-light md:w-1/2">
-                    "Dulu aku seperti kebanyakan fresh graduate - kerja 9-5, gaji UMR, dan mimpi yang tertunda. 
+                    &ldquo;Dulu aku seperti kebanyakan fresh graduate - kerja 9-5, gaji UMR, dan mimpi yang tertunda. 
                     Setiap hari commuting 3 jam, pulang capek, dan merasa hidup cuma untuk bayar tagihan. 
-                    aku tahu ada potensi lebih dalam diri aku, tapi tidak tahu harus mulai dari mana."
+                    aku tahu ada potensi lebih dalam diri aku, tapi tidak tahu harus mulai dari mana.&rdquo;
                   </div>
                   <div className="md:w-1/2">
                     <Image
@@ -100,12 +100,12 @@ export default function Solution() {
                     />
                   </div>
                   <div className="text-blue-600/70 text-xl leading-relaxed max-w-3xl font-light md:w-1/2">
-                    "Sebagai seorang ibu, aku punya mimpi besar untuk anak aku. Aku ingin dia bisa dapat pendidikan terbaik, 
+                    &ldquo;Sebagai seorang ibu, aku punya mimpi besar untuk anak aku. Aku ingin dia bisa dapat pendidikan terbaik, 
                     punya masa depan cerah, dan nggak pernah kekurangan apapun. Tapi dengan gaji UMR, mimpi ini rasanya jauh.
                     <br /><br />
                     Aku sadar, kalau mau jadi ibu yang bisa dibanggakan, aku harus berani ambil langkah besar. 
                     Aku nggak mau anakku lihat ibunya struggle dengan gaji pas-pasan. Aku mau dia lihat sosok 
-                    ibu yang kuat, mandiri, dan bisa jadi inspirasi."
+                    ibu yang kuat, mandiri, dan bisa jadi inspirasi.&rdquo;
                   </div>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function Solution() {
                 </div>
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="text-blue-600/70 text-xl leading-relaxed max-w-3xl font-light md:w-1/2">
-                    "aku sadar, untuk bisa memberikan yang terbaik buat anak aku, aku harus berani ambil langkah besar. 
+                    &ldquo;aku sadar, untuk bisa memberikan yang terbaik buat anak aku, aku harus berani ambil langkah besar. 
                     Yang aku lakukan adalah:
                     <br /><br />
                     • Fokus belajar dari mentor terbaik di komunitas
@@ -129,7 +129,7 @@ export default function Solution() {
                     <br />
                     • Selalu upgrade skill dan mindset lewat training
                     <br /><br />
-                    Hasilnya? Dalam 6 bulan pertama, income aku sudah bisa gantikan gaji corporate."
+                    Hasilnya? Dalam 6 bulan pertama, income aku sudah bisa gantikan gaji corporate.&rdquo;
                   </div>
                   <div className="md:w-1/2">
                     <Image
@@ -161,7 +161,7 @@ export default function Solution() {
                     </div>
                   ))}
                 </div>
-                <p className="text-center text-blue-600 text-xl font-light italic">And there's a lot more :)</p>
+                <p className="text-center text-blue-600 text-xl font-light italic">And there&apos;s a lot more :)</p>
               </div>
 
               <div className="mt-32 mb-32">
@@ -172,7 +172,7 @@ export default function Solution() {
                     Yang Kamu Butuhkan..
                   </h2>
                   <p className="text-xl md:text-2xl text-blue-600/70 max-w-3xl mx-auto font-light leading-relaxed mb-20">
-                    "Aku mau berbagi cerita yang mungkin akan mengubah hidupmu juga"
+                    &ldquo;Aku mau berbagi cerita yang mungkin akan mengubah hidupmu juga&rdquo;
                   </p>
                 </div>
 
@@ -183,7 +183,7 @@ export default function Solution() {
                     </p>
 
                     <p>
-                      Selama ini aku selalu berpikir kalau aku belum sukses karena belum menemukan "rahasia sukses" yang tepat.
+                      Selama ini aku selalu berpikir kalau aku belum sukses karena belum menemukan &ldquo;rahasia sukses&rdquo; yang tepat.
                     </p>
 
                     <p className="pl-6 border-l-4 border-blue-400/30">
@@ -211,7 +211,7 @@ export default function Solution() {
                       <br />
                       Scroll social media berjam-jam...
                       <br />
-                      Nunggu "mood" yang tepat untuk mulai...
+                      Nunggu &ldquo;mood&rdquo; yang tepat untuk mulai...
                     </p>
 
                     <p className="font-medium">

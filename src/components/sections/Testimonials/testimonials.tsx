@@ -14,7 +14,7 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       name: "Sarah Wijaya",
-      role: "Top Leader",
+      role: "Top Leader", 
       image: "/jule.png",
       quote: "Dulu aku ragu banget untuk mulai. Tapi Jules tuh bener-bener guide aku step by step. Dalam 3 bulan pertama udah bisa closing 4 nasabah premium!",
       achievement: "Sekarang: Income 50jt/bulan",
@@ -29,7 +29,7 @@ export default function Testimonials() {
       before: "Sebelumnya: Bank Officer"
     },
     {
-      name: "Linda Kusuma",
+      name: "Linda Kusuma", 
       role: "Rising Star",
       image: "/jule.png",
       quote: "Awalnya cuma coba-coba karena liat temen sukses. Ternyata beneran bisa mengubah hidup! Sekarang udah bisa kasih orang tua passive income.",
@@ -96,7 +96,7 @@ export default function Testimonials() {
                 </div>
 
                 <blockquote className="text-lg text-blue-600/80 mb-6 italic">
-                  "{testi.quote}"
+                  &ldquo;{testi.quote}&rdquo;
                 </blockquote>
 
                 <div className="border-t border-blue-200 pt-4">
@@ -120,4 +120,4 @@ export default function Testimonials() {
       </div>
     </section>
   );
-} 
+}

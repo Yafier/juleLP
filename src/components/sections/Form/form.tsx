@@ -2,10 +2,8 @@
 
 import React from 'react';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function FormSection() {
-  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,8 +15,6 @@ export default function FormSection() {
     e.preventDefault();
     // Handle form submission logic here
     console.log('Form submitted:', formData);
-    // Optionally redirect after submission
-    // router.push('/thank-you');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

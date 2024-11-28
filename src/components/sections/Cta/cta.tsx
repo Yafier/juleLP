@@ -11,77 +11,92 @@ interface Quote {
 
 const quotes: Quote[] = [
   {
-    text: "The only difference between where you are and where you want to be is the actions you take today.",
-    author: "Iman",
-    role: "Founder, IAG Media"
+    text: "Stop dreaming about success. Your time is now - take massive action and transform your life today!",
+    author: "Juliana Parmadi",
+    role: "Founder, Alife"
   }
 ];
 
 export function Cta() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden bg-white">
+    <section className="relative py-12 md:py-20 overflow-hidden bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header - adjusted spacing */}
-          <div className="text-left mb-12 md:mb-16">
-            <div className="text-blue-600/80 text-lg md:text-xl mb-4 md:mb-6 font-serif tracking-widest">/07</div>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-blue-600 font-serif leading-snug tracking-tight">
-              Ready to Transform
+          {/* Section Header */}
+          <div className="text-left mb-12">
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-blue-600 font-serif text-lg md:text-xl mb-3 block"
+            >
+              /09
+            </motion.span>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-4 tracking-tight"
+            >
+              <span className="font-light italic">Ready to Transform</span>
               <br />
-              Your Life?
-            </h2>
+              <span className="font-medium">Your Life?</span>
+            </motion.h2>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left Column - Quote and CTA */}
-            <div className="space-y-6 md:space-y-8">
-              {/* Quote - adjusted text sizes */}
+            <div className="space-y-8">
+              {/* Quote */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="absolute -left-6 md:-left-8 -top-6 md:-top-8 text-6xl md:text-8xl text-blue-200 font-serif">&ldquo;</div>
+                <div className="absolute -left-4 md:-left-6 -top-4 md:-top-6 text-5xl md:text-6xl text-blue-200 font-serif">&ldquo;</div>
                 <blockquote className="relative z-10">
-                  <p className="text-xl md:text-3xl text-blue-800 font-light leading-relaxed mb-4 md:mb-6">
+                  <p className="text-lg md:text-2xl text-blue-800 font-light leading-relaxed mb-4 font-serif italic">
                     {quotes[0].text}
                   </p>
                   <footer className="text-blue-600">
                     <cite className="not-italic">
-                      <span className="font-bold block text-lg md:text-xl">{quotes[0].author}</span>
-                      <span className="text-blue-600/70">{quotes[0].role}</span>
+                      <span className="font-medium block text-base md:text-lg">{quotes[0].author}</span>
+                      <span className="text-blue-600/70 text-sm md:text-base">{quotes[0].role}</span>
                     </cite>
                   </footer>
                 </blockquote>
               </motion.div>
 
-              {/* Call to Action - adjusted button size */}
-              <div className="space-y-4 md:space-y-6">
-                <p className="text-lg md:text-xl text-blue-600/70">
-                  Stop dreaming, start achieving. Join our community of high-performers today!
+              {/* Call to Action */}
+              <div className="space-y-6">
+                <p className="text-base md:text-lg text-blue-600/70">
+                  Don't let another day pass by watching others succeed. 
+                  Join our community of high-achievers today!
                 </p>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
+                  className="space-y-3"
                 >
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-lg md:text-xl font-bold py-4 md:py-6 px-6 md:px-8 rounded-xl 
-                    text-white hover:from-blue-700 hover:to-blue-900 transition-all hover:scale-[1.02]
+                  <button className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-base md:text-lg font-medium py-4 px-8 rounded-full 
+                    text-white hover:from-blue-500 hover:to-blue-700 transition-all duration-300 hover:scale-105 
                     shadow-[0_8px_16px_rgba(59,130,246,0.3)]">
-                    JOIN THE MOVEMENT
+                    GABUNG SEKARANG
                   </button>
-                  <p className="text-center text-sm md:text-base text-blue-600/70 mt-3 md:mt-4">
-                    Limited spots available for November batch
+                  <p className="text-center text-sm text-blue-600/70">
+                    Limited spots available - Batch November 2023
                   </p>
                 </motion.div>
               </div>
             </div>
 
-            {/* Right Column - Images - adjusted floating stats sizes */}
-            <div className="relative h-[400px] md:h-[600px]">
+            {/* Right Column - Image with Stats */}
+            <div className="relative h-[400px] md:h-[500px]">
               {/* Main Image */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -100,17 +115,17 @@ export function Cta() {
                 </div>
               </motion.div>
 
-              {/* Floating Stats - adjusted sizes */}
+              {/* Floating Stats */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="absolute -right-4 top-1/4 bg-white p-4 md:p-6 rounded-xl shadow-xl"
+                className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg"
               >
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1 md:mb-2">500+</div>
-                  <div className="text-sm md:text-base text-blue-600/70">Success Stories</div>
+                  <div className="text-2xl md:text-3xl font-medium text-blue-900 mb-1">500+</div>
+                  <div className="text-sm text-blue-600/70">Success Stories</div>
                 </div>
               </motion.div>
 
@@ -119,11 +134,11 @@ export function Cta() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="absolute -left-4 bottom-1/4 bg-white p-4 md:p-6 rounded-xl shadow-xl"
+                className="absolute -left-4 bottom-1/4 bg-white p-4 rounded-xl shadow-lg"
               >
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1 md:mb-2">97%</div>
-                  <div className="text-sm md:text-base text-blue-600/70">Success Rate</div>
+                  <div className="text-2xl md:text-3xl font-medium text-blue-900 mb-1">97%</div>
+                  <div className="text-sm text-blue-600/70">Success Rate</div>
                 </div>
               </motion.div>
             </div>
@@ -133,8 +148,8 @@ export function Cta() {
 
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-64 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div className="absolute bottom-1/4 -right-64 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        <div className="absolute top-1/4 -left-64 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+        <div className="absolute bottom-1/4 -right-64 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
       </div>
     </section>
   );

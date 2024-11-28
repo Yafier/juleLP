@@ -1,194 +1,190 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Objective() {
+  const textVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 20 
+    },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'easeOut'
+      }
+    })
+  };
+
+  const steps = [
+    {
+      title: "Mindset & Psychology of Success",
+      description: "Stop wasting your time with limiting beliefs! Discover rahasia mindset yang membuat orang biasa bisa menghasilkan income luar biasa.",
+      points: [
+        "Breakthrough limiting beliefs yang menghambat kesuksesanmu",
+        "Psychology of Wealth yang jarang dibahas",
+        "Cara berpikir seperti entrepreneur sukses"
+      ],
+      image: "/1.png"
+    },
+    {
+      title: "High-Value Network Access",
+      description: "Bergabung dengan komunitas ekslusif yang akan mendorongmu menjadi versi terbaik. Don't miss out on this opportunity!",
+      points: [
+        "Akses ke network para millionaire",
+        "Weekly mastermind session dengan top performers",
+        "Exclusive events & business opportunities"
+      ],
+      image: "/6.png"
+    },
+    {
+      title: "Proven Business System",
+      description: "Sistem yang sudah menghasilkan ratusan juta hingga miliaran rupiah untuk member kami. Ready to scale your success?",
+      points: [
+        "Step-by-step blueprint menuju income 8 digit",
+        "Done-for-you marketing materials",
+        "Automated income generation system"
+      ],
+      image: "/3.png"
+    },
+    {
+      title: "Expert Mentoring Program",
+      description: "Dibimbing langsung oleh mentor yang sudah membuktikan hasil. Your success is our priority!",
+      points: [
+        "1-on-1 coaching dengan expert",
+        "Daily support group yang aktif 24/7",
+        "Accountability system untuk hasil maksimal"
+      ],
+      image: "/4.png"
+    },
+    {
+      title: "Fast-Track Implementation",
+      description: "3 Bulan. That's all it takes untuk hasil pertamamu. The time for action is NOW!",
+      points: [
+        "90-day action plan yang terstruktur",
+        "Weekly progress tracking & optimization",
+        "Guaranteed results with committed action*"
+      ],
+      image: "/5.png"
+    }
+  ];
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-left">
-            <div className="text-blue-600/80 text-xl mb-6 font-serif tracking-widest">/02</div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-blue-600 font-serif leading-tight">
-              Tujuan Aku Sederhana:
+        <div className="max-w-6xl mx-auto">
+          <div className="text-left mb-12">
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-blue-600 font-serif text-lg md:text-xl mb-3 block"
+            >
+              /04
+            </motion.span>
+
+            <motion.h2
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-4 tracking-tight"
+            >
+              <span className="font-light italic">Tujuan Aku Sederhana:</span>
               <br />
-              Membantumu Meraih Lebih
-            </h2>
-            <p className="text-xl md:text-2xl text-blue-600/70 max-w-3xl font-light leading-relaxed mb-16">
+              <span className="font-medium">Membantumu Meraih Lebih</span>
+            </motion.h2>
+
+            <motion.p
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-base sm:text-lg md:text-xl text-blue-600/70 max-w-3xl font-light leading-relaxed"
+            >
               Membantu kamu menemukan potensi tersembunyimu dan mengubahnya menjadi kesuksesan nyata
+            </motion.p>
+          </div>
+
+          <div className="space-y-16">
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                className="flex flex-col md:flex-row gap-8 items-center"
+              >
+                <motion.div
+                  variants={textVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="md:w-1/2 bg-blue-600 p-8 rounded-2xl text-white"
+                >
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-serif mb-4">
+                    <span className="font-medium">Step {index + 1}:</span>
+                    <br />
+                    <span className="font-light italic">{step.title}</span>
+                  </h3>
+                  <div className="space-y-4">
+                    <p className="text-base md:text-lg text-white/90">
+                      {step.description}
+                    </p>
+                    <div className="pl-4 border-l-2 border-white/20 space-y-2">
+                      {step.points.map((point, i) => (
+                        <p key={i} className="text-sm md:text-base text-white/80">
+                          {point}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  variants={textVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="md:w-1/2"
+                >
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    width={500}
+                    height={300}
+                    className="rounded-2xl w-full shadow-lg"
+                  />
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            variants={textVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center mt-24 space-y-8 bg-blue-600 p-12 rounded-2xl text-white"
+          >
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif tracking-tight">
+              <span className="font-light italic">Ready to Start Your Journey?</span>
+            </h3>
+            
+            <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto">
+              Don't let another day pass by watching others succeed. 
+              Your time is now - join our community of achievers today!
             </p>
-          </div>
 
-          <div className="space-y-24">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-                  The Hidden Truth About Success
-                </h3>
-                <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
-                  <p>
-                    &ldquo;Rahasia sukses yang jarang dibicarakan: Kenapa orang dengan skill biasa-biasa aja 
-                    bisa jauh lebih sukses dari mereka yang punya skill tinggi?&rdquo;
-                  </p>
-                  <p className="pl-6 border-l-4 border-blue-400/30">
-                    • Psychology of Success yang akan mengubah cara pandangmu
-                    <br />
-                    • Mindset Shift dari employee ke entrepreneur
-                    <br />
-                    • Framework untuk membangun passive income
-                  </p>
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <Image
-                  src="/1.png"
-                  alt="Mindset Training"
-                  width={500}
-                  height={300}
-                  className="rounded-xl"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-1/2">
-                <Image
-                  src="/6.png"
-                  alt="Sales Mastery"
-                  width={500}
-                  height={300}
-                  className="rounded-xl"
-                />
-              </div>
-              <div className="md:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-                  The Art of Influence
-                </h3>
-                <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
-                  <p>
-                    &ldquo;Bagaimana cara menjual tanpa terkesan &lsquo;menjual&rsquo;? Rahasia komunikasi yang membuat 
-                    orang tertarik tanpa merasa dipaksa.&rdquo;
-                  </p>
-                  <p className="pl-6 border-l-4 border-blue-400/30">
-                    • Natural Selling Technique yang terbukti efektif
-                    <br />
-                    • Cara membangun trust dan kredibilitas
-                    <br />
-                    • Framework komunikasi yang mengubah skeptis jadi yakin
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-                  Beyond Money
-                </h3>
-                <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
-                  <p>
-                    &ldquo;Mengapa fokus pada uang justru menjauhkanmu dari kekayaan? Discover the real purpose 
-                    that drives sustainable success.&rdquo;
-                  </p>
-                  <p className="pl-6 border-l-4 border-blue-400/30">
-                    • Purpose-driven Business Framework
-                    <br />
-                    • Cara membangun tim yang solid dan loyal
-                    <br />
-                    • Leadership skills yang mengubah hidup banyak orang
-                  </p>
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <Image
-                  src="/3.png"
-                  alt="Purpose Driven"
-                  width={500}
-                  height={300}
-                  className="rounded-xl"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-1/2">
-                <Image
-                  src="/5.png"
-                  alt="Mindset Shift"
-                  width={500}
-                  height={300}
-                  className="rounded-xl"
-                />
-              </div>
-              <div className="md:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-                  The Mindset Trap
-                </h3>
-                <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
-                  <p>
-                    &ldquo;Kenapa kata-kata &lsquo;Aku sudah cukup dengan apa yang aku punya&rsquo; justru jadi racun 
-                    yang membunuh potensialmu perlahan-lahan?&rdquo;
-                  </p>
-                  <p className="pl-6 border-l-4 border-blue-400/30">
-                    • Why settling for &ldquo;cukup&rdquo; is the biggest trap
-                    <br />
-                    • Mengapa hidup biasa-biasa aja adalah pilihan terburuk
-                    <br />
-                    • Remember: You Only Live Once, Choose Extraordinary
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-                  Your First Win
-                </h3>
-                <div className="space-y-6 text-lg md:text-xl text-blue-600/80">
-                  <p>
-                    &ldquo;3 Bulan. That&apos;s all it takes. Dari 0 sampai closing pertamamu. 
-                    Dan setelah itu? The sky is the limit!&rdquo;
-                  </p>
-                  <p className="pl-6 border-l-4 border-blue-400/30">
-                    • Proven system untuk closing pertamamu
-                    <br />
-                    • Step-by-step guidance dari mentor
-                    <br />
-                    • My personal guarantee: Success in 90 days*
-                  </p>
-                  <p className="text-sm italic">
-                    *Selama kamu committed untuk belajar dan action
-                  </p>
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <Image
-                  src="/4.png" 
-                  alt="First Success"
-                  width={500}
-                  height={300}
-                  className="rounded-xl"
-                />
-              </div>
-            </div>
-
-            <div className="text-center space-y-8">
-              <p className="text-2xl md:text-3xl text-blue-600 font-light">
-                Ready to Transform?
-              </p>
-              
-              <div className="max-w-3xl mx-auto">
-                <p className="text-xl md:text-2xl text-blue-600/80 leading-relaxed">
-                  Join komunitas yang akan membantumu menemukan potensi tersembunyi dan 
-                  mengubahnya menjadi kesuksesan nyata.
-                </p>
-              </div>
-
-              <button className="px-8 py-4 bg-blue-600 text-white text-xl rounded-full hover:bg-blue-700 transition-all hover:scale-105 shadow-lg mt-8">
-                YA, AKU MAU BERGABUNG
-              </button>
-            </div>
-          </div>
+            <button className="px-8 py-4 bg-white text-blue-600 rounded-full 
+              hover:bg-blue-50 transition-all hover:scale-105 shadow-lg
+              text-base md:text-lg font-medium"
+            >
+              YA, SAYA MAU SUKSES SEKARANG!
+            </button>
+          </motion.div>
         </div>
       </div>
     </section>

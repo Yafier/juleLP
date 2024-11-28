@@ -55,22 +55,22 @@ const cardVariants = {
 
 export default function Hero() {
   return (
-    <>
+    <div className="flex flex-col space-y-8">
       <Navigation />
-      <motion.section className="min-h-screen flex items-end justify-center bg-gradient-to-bl from-blue-800 via-blue-500 to-white rounded-3xl mx-4 my-4">
-        <div className="container mx-auto px-4 pb-0">
-          <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+      <motion.section className="h-[75vh] flex items-start pt-6 justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 rounded-3xl mx-4 mt-2 overflow-hidden">
+        <div className="container mx-auto px-4 h-full">
+          <div className="flex flex-col items-center text-center max-w-5xl mx-auto h-full">
             {/* Animated Title */}
             <motion.h1 
               custom={0}
               variants={textVariants}
               initial="hidden"
               animate="visible"
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white font-serif px-4 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4 text-white font-serif px-1 leading-[1.1] tracking-tight"
             >
-              Dari Karyawan Biasa
+              <span className="font-light italic">The Easiest Way To</span>
               <br />
-              Jadi Miliarder Digital
+              <span className="font-medium">Generate More Income</span>
             </motion.h1>
 
             {/* Animated Description */}
@@ -79,36 +79,18 @@ export default function Hero() {
               variants={textVariants}
               initial="hidden"
               animate="visible"
-              className="text-lg md:text-xl text-white mb-8 max-w-2xl px-4"
+              className="text-sm sm:text-base md:text-lg text-white/90 mb-2 max-w-2xl px-1"
             >
-              Pernah kerja kantoran dengan gaji pas-pasan? Sekarang saya punya kebebasan waktu dan penghasilan miliaran per bulan.
+              Bergabung bersama 1000+ orang lainnya yang sudah berhasil mendapatkan penghasilan pasti dengan nominal lebih dari 10 juta rupiah cuman dalam 3 bulan .
             </motion.p>
 
-            {/* Animated Form */}
-            <motion.div 
-              variants={formVariants}
-              initial="hidden"
-              animate="visible"
-              className="flex flex-col md:flex-row gap-4 md:gap-2 mb-8 w-full max-w-xl px-4"
-            >
-              <motion.input
-                whileFocus={{ scale: 1.02 }}
-                type="email"
-                placeholder="Masukkan email kamu..."
-                className="flex-1 px-6 py-3 rounded-full bg-white/95 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-300 shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1)]"
-              />
-              <button className="px-6 py-3 bg-blue-800 text-white rounded-full hover:bg-blue-900 transition-all hover:scale-105 shadow-[0_4px_8px_-2px_rgba(0,0,0,0.2)]">
-                Gabung Sekarang.
-              </button>
-            </motion.div>
-
-            <div className="relative w-full max-w-3xl">
+            <div className="flex-grow relative w-full max-w-3xl flex items-end justify-center mt-0">
               <Image
                 src="/jule 2.png"
                 alt="Hero Image"
                 width={600}
                 height={400}
-                className="rounded-2xl w-full"
+                className="w-full object-contain object-bottom"
                 priority
               />
 
@@ -144,6 +126,27 @@ export default function Hero() {
           </div>
         </div>
       </motion.section>
-    </>
+
+      {/* Moved text segment outside the main section */}
+      <motion.div 
+        variants={textVariants}
+        initial="hidden"
+        animate="visible"
+        custom={2}
+        className="text-center px-4 mb-8"
+      >
+        <div className="max-w-4xl mx-auto">
+          <p className="font-serif text-xl sm:text-2xl md:text-3xl tracking-wide leading-relaxed">
+            <span className="text-blue-600 font-medium">/Alife</span>
+            <br />
+            <span className="text-blue-900 italic">
+              Community that focus on Business
+              <br />
+              While helping to empower each other
+            </span>
+          </p>
+        </div>
+      </motion.div>
+    </div>
   );
 } 

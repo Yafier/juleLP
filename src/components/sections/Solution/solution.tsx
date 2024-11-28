@@ -1,9 +1,25 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Solution() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start center", "start start"]
+  });
+
+  // Faster transition to blue
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0, 0.2],
+    [
+      "rgb(255, 255, 255)",
+      "rgb(37, 99, 235)"
+    ]
+  );
+
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -56,16 +72,20 @@ export default function Solution() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <motion.section 
+      ref={sectionRef}
+      style={{ backgroundColor }}
+      className="py-12 md:py-20 transition-colors duration-500"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Introduction Section - Updated with Video */}
+          {/* Introduction Section */}
           <div className="mb-24">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-blue-600 font-serif text-lg md:text-xl mb-4 block"
+              className="text-white/90 font-serif text-lg md:text-xl mb-4 block"
             >
               /03
             </motion.span>
@@ -75,14 +95,14 @@ export default function Solution() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-8 tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-8 tracking-tight text-white"
             >
               <span className="font-light italic">Meet Juliana Parmadi,</span>
               <br />
               <span className="font-medium">Your Guide to Financial Freedom</span>
             </motion.h2>
 
-            {/* Video replacing Image */}
+            {/* Video Section */}
             <motion.div
               variants={textVariants}
               initial="hidden"
@@ -98,7 +118,6 @@ export default function Solution() {
                 playsInline
               >
                 <source src="/jule-1.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
               </video>
             </motion.div>
 
@@ -107,7 +126,7 @@ export default function Solution() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-blue-600/70 text-base md:text-lg leading-relaxed space-y-6"
+              className="text-white/80 text-base md:text-lg leading-relaxed space-y-6"
             >
               <p>
                 &quot;Hi, I&apos;m Julie. 5 tahun lalu, aku masih seperti kebanyakan fresh graduate - 
@@ -122,18 +141,21 @@ export default function Solution() {
 
           {/* System Section */}
           <div className="mb-16">
-            <motion.div className="text-center mb-12">
+            <motion.div className="text-center mb-16">
               <motion.h3
                 variants={textVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-2xl sm:text-3xl md:text-4xl font-serif mb-6 tracking-tight"
+                className="text-2xl sm:text-3xl md:text-4xl font-serif mb-6 tracking-tight text-white"
               >
                 <span className="font-light italic">The System That</span>
                 <br />
                 <span className="font-medium">Changed My Life</span>
               </motion.h3>
+              
+              {/* Added decorative line */}
+              <div className="w-24 h-px bg-white/30 mx-auto"></div>
             </motion.div>
 
             {/* Points and Video Sections */}
@@ -142,9 +164,8 @@ export default function Solution() {
                 key={index}
                 className="mb-16 last:mb-0"
               >
-                {/* Single Card Container */}
-                <div className="rounded-xl border-2 border-blue-600 overflow-hidden">
-                  {/* Video Container - Always on top */}
+                <div className="rounded-xl overflow-hidden bg-white shadow-lg">
+                  {/* Video Container */}
                   <motion.div
                     variants={textVariants}
                     initial="hidden"
@@ -160,22 +181,21 @@ export default function Solution() {
                       playsInline
                     >
                       <source src={section.point.video} type="video/mp4" />
-                      Your browser does not support the video tag.
                     </video>
                   </motion.div>
 
-                  {/* Text Container - Always below video */}
+                  {/* Text Container */}
                   <motion.div
                     variants={textVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="w-full p-6 bg-white"
+                    className="w-full p-6"
                   >
-                    <h4 className="text-base font-bold text-blue-600 mb-2">
+                    <h4 className="text-base font-serif font-bold text-blue-900 mb-2">
                       {section.point.title}
                     </h4>
-                    <div className="h-px bg-blue-600/20 my-2" />
+                    <div className="h-px bg-blue-100 my-2" />
                     <p className="text-sm text-blue-600/70">
                       {section.point.description}
                     </p>
@@ -185,14 +205,14 @@ export default function Solution() {
             ))}
           </div>
 
-          {/* Results Section with tighter spacing */}
+          {/* Results Section */}
           <div className="mt-24">
             <motion.h3 
               variants={textVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-2xl sm:text-3xl md:text-4xl font-serif mb-12 tracking-tight text-center"
+              className="text-2xl sm:text-3xl md:text-4xl font-serif mb-12 tracking-tight text-center text-white"
             >
               <span className="font-light italic">Don&apos;t Let Fear Hold You Back</span>
               <br />
@@ -217,10 +237,10 @@ export default function Solution() {
                   custom={index}
                   className="text-center p-2"
                 >
-                  <div className="text-xl md:text-2xl font-medium text-blue-900 mb-1">
+                  <div className="text-xl md:text-2xl font-medium text-white mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-blue-600/70 text-xs md:text-sm">
+                  <div className="text-white/80 text-xs md:text-sm">
                     {stat.text}
                   </div>
                 </motion.div>
@@ -246,6 +266,6 @@ export default function Solution() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 } 

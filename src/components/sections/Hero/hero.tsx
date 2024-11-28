@@ -22,115 +22,85 @@ const textVariants = {
   })
 };
 
-const cardVariants = {
-  hidden: { 
-    opacity: 0, 
-    scale: 0.8 
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    }
-  }
-};
-
 export default function Hero() {
   return (
-    <div className="flex flex-col space-y-8">
+    <>
       <Navigation />
-      <motion.section className="h-[75vh] flex items-start pt-6 justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 rounded-3xl mx-4 mt-2 overflow-hidden">
+      <motion.section className="h-[75vh] md:min-h-screen flex items-start pt-12 justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 rounded-3xl mx-4 mt-2 mb-4">
         <div className="container mx-auto px-4 h-full">
           <div className="flex flex-col items-center text-center max-w-5xl mx-auto h-full">
-            {/* Animated Title */}
+            {/* Title - Added spacing at top */}
             <motion.h1 
-              custom={0}
               variants={textVariants}
               initial="hidden"
               animate="visible"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4 text-white font-serif px-1 leading-[1.1] tracking-tight"
+              custom={0}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif mb-1 text-white tracking-tight"
             >
-              <span className="font-light italic">The Easiest Way To</span>
+              <span className="font-light italic">The Easiest Way</span>
               <br />
-              <span className="font-medium">Generate More Income</span>
+              <span className="font-medium">To Increase Your Income</span>
             </motion.h1>
 
-            {/* Animated Description */}
+            {/* Description - Tighter spacing */}
             <motion.p 
-              custom={1}  
               variants={textVariants}
               initial="hidden"
               animate="visible"
-              className="text-sm sm:text-base md:text-lg text-white/90 mb-2 max-w-2xl px-1"
+              custom={1}
+              className="text-sm sm:text-base md:text-lg text-white/90 mb-0 max-w-2xl px-4"
             >
-              Bergabung bersama 1000+ orang lainnya yang sudah berhasil mendapatkan penghasilan pasti dengan nominal lebih dari 10 juta rupiah cuman dalam 3 bulan .
+              Stop wasting your time! Sementara kamu ragu, orang lain sudah melangkah maju. 
+              Saatnya raih kebebasan waktu dan penghasilan miliaran per bulan.
             </motion.p>
 
-            <div className="flex-grow relative w-full max-w-3xl flex items-end justify-center mt-0">
+            {/* Image Container - Reduced top margin */}
+            <div className="relative w-full max-w-3xl mt-auto">
+              {/* Main Image */}
               <Image
                 src="/jule 2.png"
                 alt="Hero Image"
                 width={600}
                 height={400}
-                className="w-full object-contain object-bottom"
+                className="w-full h-auto object-contain"
                 priority
               />
 
-              {/* Animated Testimonial Cards */}
+              {/* Popup Messages - Adjusted positions */}
               <motion.div
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="absolute top-[55%] -translate-y-[55%] -left-4 bg-white/95 p-4 rounded-xl max-w-xs backdrop-blur-sm shadow-[0_4px_12px_-2px_rgba(0,0,0,0.12)] hidden md:block"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 }}
+                className="absolute left-4 top-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg max-w-[180px] text-left"
               >
-                <p className="text-sm text-blue-950">Breakthrough: Dari 0 ke Rp100 Juta dalam 6 bulan pertama</p>
-                <div className="flex items-center mt-2">
-                  <div className="w-6 h-6 rounded-full bg-gray-200 mr-2"></div>
-                  <span className="text-xs text-gray-700">Andre Wijaya, Top Performer</span>
-                </div>
+                <p className="text-sm font-medium text-blue-900">Mindset & Community</p>
+                <p className="text-xs text-blue-600/70">Transform your mindset, join our exclusive community</p>
               </motion.div>
 
               <motion.div
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="absolute top-[40%] -translate-y-[40%] right-4 bg-white/95 p-4 rounded-xl max-w-xs backdrop-blur-sm shadow-[0_4px_12px_-2px_rgba(0,0,0,0.12)] hidden md:block"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.7 }}
+                className="absolute right-4 top-2/3 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg max-w-[180px] text-left"
               >
-                <p className="text-sm text-blue-950">Mindset & community ini mengubah game plan bisnis saya</p>
-                <div className="flex items-center mt-2">
-                  <div className="w-6 h-6 rounded-full bg-gray-200 mr-2"></div>
-                  <span className="text-xs text-gray-700">Jessica, Business Leader</span>
-                </div>
+                <p className="text-sm font-medium text-blue-900">Proven System</p>
+                <p className="text-xs text-blue-600/70">Step-by-step blueprint to success</p>
+              </motion.div>
+
+              {/* Expert Mentoring popup - Desktop only */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.9 }}
+                className="hidden md:block absolute left-0 bottom-1/4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg max-w-[200px] text-left"
+              >
+                <p className="text-sm font-medium text-blue-900">Expert Mentoring</p>
+                <p className="text-xs text-blue-600/70">Get guidance from successful mentors</p>
               </motion.div>
             </div>
           </div>
         </div>
       </motion.section>
-
-      {/* Moved text segment outside the main section */}
-      <motion.div 
-        variants={textVariants}
-        initial="hidden"
-        animate="visible"
-        custom={2}
-        className="text-center px-4 mb-8"
-      >
-        <div className="max-w-4xl mx-auto">
-          <p className="font-serif text-xl sm:text-2xl md:text-3xl tracking-wide leading-relaxed">
-            <span className="text-blue-600 font-medium">/Alife</span>
-            <br />
-            <span className="text-blue-900 italic">
-              Community that focus on Business
-              <br />
-              While helping to empower each other
-            </span>
-          </p>
-        </div>
-      </motion.div>
-    </div>
+    </>
   );
 } 

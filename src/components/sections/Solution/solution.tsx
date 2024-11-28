@@ -10,13 +10,13 @@ export default function Solution() {
     offset: ["start center", "start start"]
   });
 
-  // Faster transition to blue
+  // Gradient transition
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.2],
     [
       "rgb(255, 255, 255)",
-      "rgb(37, 99, 235)"
+      "rgb(30, 58, 138)" // Darker blue to match gradient
     ]
   );
 
@@ -75,7 +75,7 @@ export default function Solution() {
     <motion.section 
       ref={sectionRef}
       style={{ backgroundColor }}
-      className="py-12 md:py-20 transition-colors duration-500"
+      className="py-12 md:py-20 transition-colors duration-500 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">

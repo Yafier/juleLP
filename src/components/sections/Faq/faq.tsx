@@ -16,7 +16,7 @@ interface FaqItem {
 const faqItems: FaqItem[] = [
   {
     question: "Apakah program ini cocok untuk pemula?",
-    answer: "Absolutely yes! Program ini dirancang untuk semua level. Remember: 'Everyone starts at zero.' Yang kami butuhkan hanya 2 hal dari kamu:\n\n• Growth mindset yang benar\n• Komitmen untuk sukses\n\nKami punya sistem yang proven untuk membimbingmu step-by-step dari nol sampai menghasilkan income 6-8 digit per bulan! 🚀"
+    answer: "Absolutely yes! Program ini dirancang untuk semua level. Remember: &apos;Everyone starts at zero.&apos; Yang kami butuhkan hanya 2 hal dari kamu:\n\n• Growth mindset yang benar\n• Komitmen untuk sukses\n\nKami punya sistem yang proven untuk membimbingmu step-by-step dari nol sampai menghasilkan income 6-8 digit per bulan! 🚀"
   },
   {
     question: "Berapa waktu yang dibutuhkan untuk melihat hasil?",
@@ -24,7 +24,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "Bagaimana dengan support system-nya?",
-    answer: "This is what makes us different! Kamu akan dapat:\n\n• Private community exclusive dengan high-achievers\n• Weekly coaching calls dengan top performers\n• 1-on-1 mentoring session\n• 24/7 support dari team\n• Done-for-you marketing materials\n\nDon't miss out on this opportunity to be part of something extraordinary! 🌟"
+    answer: "This is what makes us different! Kamu akan dapat:\n\n• Private community exclusive dengan high-achievers\n• Weekly coaching calls dengan top performers\n• 1-on-1 mentoring session\n• 24/7 support dari team\n• Done-for-you marketing materials\n\nDon&apos;t miss out on this opportunity to be part of something extraordinary! 🌟"
   },
   {
     question: "Apakah bisa diikuti sambil kerja full-time?",
@@ -32,11 +32,11 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "Apa yang membedakan program ini dengan yang lain?",
-    answer: "Straight facts yang membuat kami berbeda:\n\n• Proven system yang sudah menghasilkan 500+ successful members\n• Real-time support dari mentor berpenghasilan 8-9 digit\n• High-ticket closing techniques yang powerful\n• Ready-to-use marketing materials worth 150jt+\n• Lifetime access ke updates dan resources\n\nThis is not just a course, it's your complete business system! 🚀"
+    answer: "Straight facts yang membuat kami berbeda:\n\n• Proven system yang sudah menghasilkan 500+ successful members\n• Real-time support dari mentor berpenghasilan 8-9 digit\n• High-ticket closing techniques yang powerful\n• Ready-to-use marketing materials worth 150jt+\n• Lifetime access ke updates dan resources\n\nThis is not just a course, it&apos;s your complete business system! 🚀"
   },
   {
     question: "Bagaimana dengan jaminan keberhasilannya?",
-    answer: "Let's be real: Kesuksesan 100% ada di tangan kamu. Tapi yang bisa kami jamin:\n\n• Sistem yang sudah proven works\n• Full support dari tim expert\n• Step-by-step guidance\n• Weekly accountability check\n• Money-back guarantee*\n\n*Syarat dan ketentuan berlaku. The real question is: Are you ready to change your life? 🎯"
+    answer: "Let&apos;s be real: Kesuksesan 100% ada di tangan kamu. Tapi yang bisa kami jamin:\n\n• Sistem yang sudah proven works\n• Full support dari tim expert\n• Step-by-step guidance\n• Weekly accountability check\n• Money-back guarantee*\n\n*Syarat dan ketentuan berlaku. The real question is: Are you ready to change your life? 🎯"
   }
 ];
 
@@ -64,7 +64,7 @@ export function Faq() {
             >
               <span className="font-light italic">Questions?</span>
               <br />
-              <span className="font-medium">We've Got You Covered</span>
+              <span className="font-medium">We&apos;ve Got You Covered</span>
             </motion.h2>
 
             <motion.p

@@ -111,12 +111,12 @@ export default function Solution() {
               className="text-blue-600/70 text-base md:text-lg leading-relaxed space-y-6"
             >
               <p>
-                "Hi, I'm Julie. 5 tahun lalu, aku masih seperti kebanyakan fresh graduate - 
-                kerja 9-5 dengan gaji UMR, commuting 3 jam setiap hari, dan merasa hidup cuma untuk bayar tagihan."
+                &quot;Hi, I&apos;m Julie. 5 tahun lalu, aku masih seperti kebanyakan fresh graduate - 
+                kerja 9-5 dengan gaji UMR, commuting 3 jam setiap hari, dan merasa hidup cuma untuk bayar tagihan.&quot;
               </p>
               <p>
-                "Sebagai single mom, aku punya mimpi besar untuk anakku. Aku ingin dia bisa dapat 
-                pendidikan terbaik dan masa depan cerah. Tapi dengan gaji UMR, mimpi ini rasanya jauh."
+                &quot;Sebagai single mom, aku punya mimpi besar untuk anakku. Aku ingin dia bisa dapat 
+                pendidikan terbaik dan masa depan cerah. Tapi dengan gaji UMR, mimpi ini rasanya jauh.&quot;
               </p>
             </motion.div>
           </div>
@@ -195,7 +195,7 @@ export default function Solution() {
               viewport={{ once: true }}
               className="text-2xl sm:text-3xl md:text-4xl font-serif mb-12 tracking-tight text-center"
             >
-              <span className="font-light italic">Don't Let Fear Hold You Back</span>
+              <span className="font-light italic">Don&apos;t Let Fear Hold You Back</span>
               <br />
               <span className="font-medium">Join Our Success Stories</span>
             </motion.h3>

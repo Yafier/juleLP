@@ -73,7 +73,7 @@ export function Cta() {
               {/* Call to Action */}
               <div className="space-y-6">
                 <p className="text-base md:text-lg text-blue-600/70">
-                  Don't let another day pass by watching others succeed. 
+                  Don&apos;t let another day pass by watching others succeed. 
                   Join our community of high-achievers today!
                 </p>
                 <motion.div

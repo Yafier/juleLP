@@ -33,8 +33,8 @@ export default function Objective() {
       image: "/1.png"
     },
     {
-      title: "High-Value Network Access",
-      description: "Bergabung dengan komunitas ekslusif yang akan mendorongmu menjadi versi terbaik. Don't miss out on this opportunity!",
+      title: "High-Value Network Access", 
+      description: "Bergabung dengan komunitas ekslusif yang akan mendorongmu menjadi versi terbaik. Don&apos;t miss out on this opportunity!",
       points: [
         "Akses ke network para millionaire",
         "Weekly mastermind session dengan top performers",
@@ -47,7 +47,7 @@ export default function Objective() {
       description: "Sistem yang sudah menghasilkan ratusan juta hingga miliaran rupiah untuk member kami. Ready to scale your success?",
       points: [
         "Step-by-step blueprint menuju income 8 digit",
-        "Done-for-you marketing materials",
+        "Done-for-you marketing materials", 
         "Automated income generation system"
       ],
       image: "/3.png"
@@ -64,7 +64,7 @@ export default function Objective() {
     },
     {
       title: "Fast-Track Implementation",
-      description: "3 Bulan. That's all it takes untuk hasil pertamamu. The time for action is NOW!",
+      description: "3 Bulan. That&apos;s all it takes untuk hasil pertamamu. The time for action is NOW!",
       points: [
         "90-day action plan yang terstruktur",
         "Weekly progress tracking & optimization",
@@ -174,7 +174,7 @@ export default function Objective() {
             </h3>
             
             <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto">
-              Don't let another day pass by watching others succeed. 
+              Don&apos;t let another day pass by watching others succeed. 
               Your time is now - join our community of achievers today!
             </p>
 

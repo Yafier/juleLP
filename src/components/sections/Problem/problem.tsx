@@ -112,9 +112,9 @@ export default function Problem() {
             className="mt-8 md:mt-12 text-center"
           >
             <p className="text-lg md:text-xl font-serif italic text-blue-900">
-              "Most people fail in life not because they aim too high and miss,
+              &quot;Most people fail in life not because they aim too high and miss,
               <br />
-              but because they aim too low and hit."
+              but because they aim too low and hit.&quot;
             </p>
             <cite className="text-sm md:text-base text-blue-600/70 mt-4 block">
               — Iman Gadzhi

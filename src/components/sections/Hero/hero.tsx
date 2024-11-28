@@ -22,22 +22,6 @@ const textVariants = {
   })
 };
 
-const formVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 20 
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.4,
-      duration: 0.5,
-      ease: "easeOut"
-    }
-  }
-};
-
 const cardVariants = {
   hidden: { 
     opacity: 0, 

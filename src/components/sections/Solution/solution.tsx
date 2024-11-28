@@ -129,7 +129,7 @@ export default function Solution() {
               className="text-white/80 text-base md:text-lg leading-relaxed space-y-6"
             >
               <p>
-                &quot;Hi, I&apos;m Julie. 5 tahun lalu, aku masih seperti kebanyakan fresh graduate - 
+                &quot;Hi, I&apos;m Juliana Parmadi atau Jule. 5 tahun lalu, aku masih seperti kebanyakan fresh graduate - 
                 kerja 9-5 dengan gaji UMR, commuting 3 jam setiap hari, dan merasa hidup cuma untuk bayar tagihan.&quot;
               </p>
               <p>

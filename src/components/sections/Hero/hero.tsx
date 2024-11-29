@@ -112,7 +112,7 @@ export default function Hero() {
                 >
                   <p className="text-base md:text-lg font-medium text-blue-900">500+ Success Stories</p>
                   <p className="text-sm md:text-base text-blue-600/70">
-                    Join our community of achievers who've transformed their lives. Don't miss out!
+                    Join our community of achievers who have transformed their lives. Do not miss out!
                   </p>
                 </motion.div>
 

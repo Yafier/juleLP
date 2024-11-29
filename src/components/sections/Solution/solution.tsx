@@ -129,7 +129,7 @@ export default function Solution() {
               className="text-white/80 text-base md:text-lg leading-relaxed space-y-6"
             >
               <p>
-                &quot;Hi, I&apos;m Juliana Parmadi atau Jule. 5 tahun lalu, aku masih seperti kebanyakan fresh graduate - 
+                &quot;Hi, aku Juliana Parmadi atau Jule. 5 tahun lalu, aku masih seperti kebanyakan fresh graduate - 
                 kerja 9-5 dengan gaji UMR, commuting 3 jam setiap hari, dan merasa hidup cuma untuk bayar tagihan.&quot;
               </p>
               <p>
@@ -214,7 +214,7 @@ export default function Solution() {
               viewport={{ once: true }}
               className="text-2xl sm:text-3xl md:text-4xl font-serif mb-12 tracking-tight text-center text-white"
             >
-              <span className="font-light italic">Don&apos;t Let Fear Hold You Back</span>
+              <span className="font-light italic">Do not Let Fear Hold You Back</span>
               <br />
               <span className="font-medium">Join Our Success Stories</span>
             </motion.h3>

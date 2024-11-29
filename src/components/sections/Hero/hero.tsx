@@ -73,36 +73,38 @@ export default function Hero() {
                 Saatnya raih kebebasan waktu dan penghasilan miliaran per bulan.
               </motion.p>
 
-              {/* Image Container */}
+              {/* Image Container - Further reduced sizing */}
               <motion.div 
                 variants={imageVariants}
                 initial="hidden"
                 animate="visible"
-                className="absolute bottom-0 left-0 right-0 mx-auto w-full"
+                className="absolute bottom-0 left-0 right-0 w-full"
               >
-                {/* Main Image */}
+                {/* Main Image - Smaller sizes */}
                 <div className="relative w-full mx-auto
-                  max-w-[600px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]
-                  aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4]"
+                  h-[420px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
                 >
                   <Image
                     src="/jule 2.png"
                     alt="Hero Image"
                     fill
                     className="object-contain object-bottom"
+                    sizes="(max-width: 768px) 100vw,
+                           (max-width: 1200px) 80vw,
+                           70vw"
                     priority
                   />
                 </div>
 
-                {/* Popup Messages - Adjusted positions for mobile */}
+                {/* Popup Messages - Smaller text on mobile */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute left-[15%] top-[45%] sm:top-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] md:max-w-[200px] lg:max-w-[220px] text-left"
+                  className="absolute left-[10%] top-[35%] sm:top-[40%] bg-white/90 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg max-w-[180px] sm:max-w-[200px] text-left"
                 >
-                  <p className="text-base md:text-lg font-medium text-blue-900">From Zero to Hero</p>
-                  <p className="text-sm md:text-base text-blue-600/70">
+                  <p className="text-sm sm:text-base md:text-lg font-medium text-blue-900">From Zero to Hero</p>
+                  <p className="text-xs sm:text-sm md:text-base text-blue-600/70">
                     Started with UMR salary, now generating 8-digit monthly income. Your journey can start here!
                   </p>
                 </motion.div>
@@ -111,10 +113,10 @@ export default function Hero() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.7 }}
-                  className="absolute right-[15%] top-[75%] sm:top-2/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] md:max-w-[200px] lg:max-w-[220px] text-left"
+                  className="absolute right-[10%] top-[60%] sm:top-[70%] bg-white/90 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg max-w-[180px] sm:max-w-[200px] text-left"
                 >
-                  <p className="text-base md:text-lg font-medium text-blue-900">500+ Success Stories</p>
-                  <p className="text-sm md:text-base text-blue-600/70">
+                  <p className="text-sm sm:text-base md:text-lg font-medium text-blue-900">500+ Success Stories</p>
+                  <p className="text-xs sm:text-sm md:text-base text-blue-600/70">
                     Join our community of achievers who have transformed their lives. Do not miss out!
                   </p>
                 </motion.div>
@@ -123,7 +125,7 @@ export default function Hero() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.9 }}
-                  className="hidden md:block absolute left-[15%] bottom-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] md:max-w-[200px] lg:max-w-[220px] text-left"
+                  className="hidden md:block absolute left-[15%] bottom-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] text-left"
                 >
                   <p className="text-base md:text-lg font-medium text-blue-900">Time Freedom Achieved</p>
                   <p className="text-sm md:text-base text-blue-600/70">

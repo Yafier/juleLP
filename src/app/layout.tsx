@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Your Product Name",
-  description: "Your product description here",
+  title: "Join Juliana Parmadi Team",
+  description: "Join Juliana Parmadi Team - Unlock your potential and achieve financial freedom with our proven business system and expert mentoring program.",
 };
 
 export default function RootLayout({

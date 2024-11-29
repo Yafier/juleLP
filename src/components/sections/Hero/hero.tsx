@@ -26,7 +26,6 @@ const textVariants = {
 const imageVariants = {
   hidden: { 
     opacity: 0,
-    x: -250,
     y: 100,
     scale: 0.95
   },
@@ -74,29 +73,33 @@ export default function Hero() {
                 Saatnya raih kebebasan waktu dan penghasilan miliaran per bulan.
               </motion.p>
 
-              {/* Image Container - Centered and bottom-aligned */}
+              {/* Image Container */}
               <motion.div 
                 variants={imageVariants}
                 initial="hidden"
                 animate="visible"
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl mx-auto"
+                className="absolute bottom-0 left-0 right-0 mx-auto w-full"
               >
                 {/* Main Image */}
-                <Image
-                  src="/jule 2.png"
-                  alt="Hero Image"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-contain"
-                  priority
-                />
+                <div className="relative w-full mx-auto
+                  max-w-[600px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]
+                  aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4]"
+                >
+                  <Image
+                    src="/jule 2.png"
+                    alt="Hero Image"
+                    fill
+                    className="object-contain object-bottom"
+                    priority
+                  />
+                </div>
 
-                {/* Popup Messages */}
+                {/* Popup Messages - Adjusted positions for mobile */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute left-[15%] top-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] text-left"
+                  className="absolute left-[15%] top-[45%] sm:top-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] md:max-w-[200px] lg:max-w-[220px] text-left"
                 >
                   <p className="text-base md:text-lg font-medium text-blue-900">From Zero to Hero</p>
                   <p className="text-sm md:text-base text-blue-600/70">
@@ -108,7 +111,7 @@ export default function Hero() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.7 }}
-                  className="absolute right-[15%] top-2/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] text-left"
+                  className="absolute right-[15%] top-[75%] sm:top-2/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] md:max-w-[200px] lg:max-w-[220px] text-left"
                 >
                   <p className="text-base md:text-lg font-medium text-blue-900">500+ Success Stories</p>
                   <p className="text-sm md:text-base text-blue-600/70">
@@ -120,7 +123,7 @@ export default function Hero() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.9 }}
-                  className="hidden md:block absolute left-[15%] bottom-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] text-left"
+                  className="hidden md:block absolute left-[15%] bottom-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] md:max-w-[200px] lg:max-w-[220px] text-left"
                 >
                   <p className="text-base md:text-lg font-medium text-blue-900">Time Freedom Achieved</p>
                   <p className="text-sm md:text-base text-blue-600/70">

@@ -237,7 +237,7 @@ export default function Fomo() {
           <div className="relative pt-12">
             <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 p-8 md:p-12">
               <div className="text-left mb-8">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif mb-4 text-white">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4 text-white">
                   <span className="font-light italic">Sistem Bisnis</span>
                   <br />
                   <span className="font-medium">Yang Sudah Terbukti</span>
@@ -298,7 +298,7 @@ export default function Fomo() {
               </button>
               
               <p className="text-white/80 text-center text-sm md:text-base">
-                Jangan biarkan kesempatan ini berlalu. Take action now!
+                Akses GRATIS untuk 50 pendaftar pertama dan akan mendapatkan semua benefit di atas! Jangan sampai kehabisan slot.
               </p>
             </div>
           </div>

@@ -37,35 +37,35 @@ export default function Solution() {
     {
       point: {
         title: "MINDSET TRANSFORMATION",
-        description: "Stop being average! Transformasi dari mindset karyawan biasa menjadi entrepreneur yang menghasilkan passive income jutaan per hari. Discover rahasia mindset yang membuat orang biasa bisa menghasilkan income luar biasa.\n\nYang akan kamu dapatkan:\n• Psychology of Wealth yang jarang dibahas\n• Breakthrough limiting beliefs yang menghambat\n• Framework untuk membangun passive income\n• Cara berpikir seperti entrepreneur sukses",
-        video: "/1.mp4"
+        description: "Dulu aku juga sama seperti kamu, percaya kalau jalan menuju sukses cuma lewat karir 9-5. Takut ambil risiko bisnis karena mindset 'aman'. But look at me now - dari karyawan biasa jadi entrepreneur dengan passive income jutaan per hari!\n\nLet me share what changed my life with you by joining this community",
+        video: "/4.mp4"
       }
     },
     {
       point: {
         title: "HIGH-VALUE NETWORK",
-        description: "Bergabung dengan komunitas ekslusif yang akan mendorongmu menjadi versi terbaik. Access ke network para sukses yang tidak semua orang bisa dapatkan.\n\nExclusive benefits:\n• Weekly mastermind session dengan top performers\n• Private community dengan high-achievers\n• Exclusive events & business opportunities\n• Direct access ke successful entrepreneurs",
+        description: "Dulu aku nggak punya network sama sekali. Sekarang? I'm surrounded by successful people yang mendorong aku grow beyond my limits. Let me help you get the same transformation!\n\nWhat you'll get by joining this community is endless.",
         video: "/2.mp4"
       }
     },
     {
       point: {
         title: "PROVEN BUSINESS SYSTEM",
-        description: "Sistem yang sudah menghasilkan ratusan juta hingga miliaran rupiah untuk member kami. Ready to scale your success?\n\nYang membuat sistem kami berbeda:\n• Step-by-step blueprint menuju income 8 digit\n• Done-for-you marketing materials\n• Automated income generation system\n• Proven sales funnel yang sudah menghasilkan",
+        description: "From zero business knowledge ke sistem yang menghasilkan miliaran. This is the exact system that changed my life! Dan sekarang udah proven work buat ratusan member.\n\nThe system isn't build for orang terpilih, tapi for everyone who's willing to do more to change their life.",
         video: "/3.mp4"
       }
     },
     {
       point: {
         title: "EXPERT MENTORING",
-        description: "Dibimbing langsung oleh mentor yang sudah membuktikan hasil. Your success is our priority!\n\nProgram mentoring includes:\n• 1-on-1 coaching dengan expert\n• Daily support group yang aktif 24/7\n• Accountability system untuk hasil maksimal\n• Direct feedback untuk percepat kesuksesan",
-        video: "/4.mp4"
+        description: "Dulu aku berjuang sendiri tanpa guidance. Until aku join business ini yang provide mentorship yang bener-bener leading with empathy and fire yang ngebuat aku terus semangat. Sekarang? I'm here to be the mentor I wish I had! Your success is my personal mission.",
+        video: "/1.mp4"
       }
     },
     {
       point: {
         title: "BREAKTHROUGH FORMULA",
-        description: "Formula rahasia yang sudah mengubah ribuan orang dari karyawan biasa menjadi entrepreneur sukses. Your time is now!\n\nThe secret sauce includes:\n• High-ticket closing techniques\n• Personal branding mastery\n• Wealth acceleration strategies\n• Time freedom blueprint",
+        description: "The exact formula yang transform aku dari staff biasa ke 7-figure entrepreneur. Dari takut sales ke closing deals worth billions! This can be your story too.\n\nI'll share with you all you need to get the same result.",
         video: "/5.mp4"
       }
     }
@@ -192,7 +192,7 @@ export default function Solution() {
                     viewport={{ once: true }}
                     className="w-full p-6"
                   >
-                    <h4 className="text-base font-serif font-bold text-blue-900 mb-2">
+                    <h4 className="text-lg md:text-xl font-serif font-bold text-blue-900 mb-2">
                       {section.point.title}
                     </h4>
                     <div className="h-px bg-blue-100 my-2" />

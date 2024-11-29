@@ -24,8 +24,8 @@ export default function Steps() {
   const steps: Step[] = [
     {
       number: "1",
-      title: "Month Apprentice",
-      description: "Stop wasting your time! Mulai perjalananmu dengan sistem yang sudah terbukti menghasilkan ratusan juta untuk member kami.",
+      title: "Month Apprentice", 
+      description: "Ready to change your life? Bulan pertama fokus pada pembelajaran intensif dan observasi. Our expert leaders akan membimbing dan menunjukkan semua yang kamu butuhkan untuk sukses!",
       images: [
         { src: "/2.png" },
         { src: "/3.png" }
@@ -35,7 +35,7 @@ export default function Steps() {
     {
       number: "2",
       title: "Month Rising Star",
-      description: "Breakthrough your limits! Kuasai teknik closing yang powerful dan bangun personal brandmu untuk hasil maksimal.",
+      description: "Stop being passive! Saatnya implementasi semua teori yang sudah dipelajari. We'll push you out of your comfort zone untuk mengambil lebih banyak action dan melihat hasil nyata.",
       images: [
         { src: "/4.png" },
         { src: "/5.png" }
@@ -45,7 +45,7 @@ export default function Steps() {
     {
       number: "3",
       title: "Month Elite Partner",
-      description: "Scale your success! Pelajari strategi leadership dan bangun tim yang solid untuk passive income berkelanjutan.",
+      description: "This is your moment! Dengan full support dari komunitas, kamu akan ditantang mencapai income pertama 10 juta. Don't let fear hold you back - we got your back!",
       images: [
         { src: "/6.png" },
         { src: "/7.png" }
@@ -55,7 +55,7 @@ export default function Steps() {
     {
       number: "4",
       title: "Month Top Leader",
-      description: "Your legacy starts here! Kuasai high-ticket closing dan automated business system untuk income miliaran per bulan.",
+      description: "Your time to shine! Kembangkan personal style-mu sendiri, bangun tim yang solid, dan mulai journey-mu sebagai leader. Are you ready to inspire others and create your legacy?",
       images: [
         { src: "/8.png" },
         { src: "/9.png" }

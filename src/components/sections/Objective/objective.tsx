@@ -24,51 +24,51 @@ export default function Objective() {
   const steps = [
     {
       title: "Mindset & Psychology of Success",
-      description: "Stop wasting your time with limiting beliefs! Discover rahasia mindset yang membuat orang biasa bisa menghasilkan income luar biasa.",
+      description: "Apakah kamu merasa stuck dengan mindset yang sama? Aku akan membagikan rahasia mindset yang mengubah hidupku dari UMR ke penghasilan miliaran. It's time to break free!",
       points: [
-        "Breakthrough limiting beliefs yang menghambat kesuksesanmu",
-        "Psychology of Wealth yang jarang dibahas",
-        "Cara berpikir seperti entrepreneur sukses"
+        "Bongkar mindset toxic yang bikin kamu stuck bertahun-tahun",
+        "Master the psychology of wealth yang aku pelajari dari mentor terbaik",
+        "Upgrade cara berpikirmu seperti top 1% entrepreneurs"
       ],
       image: "/1.png"
     },
     {
-      title: "High-Value Network Access", 
-      description: "Bergabung dengan komunitas ekslusif yang akan mendorongmu menjadi versi terbaik. Do not miss out on this opportunity!",
+      title: "High-Value Network Access",
+      description: "Remember: your network is your net worth. Aku masih ingat rasanya sendirian tanpa mentor. Sekarang, aku buka akses ke circle ekslusif yang akan transform hidupmu!",
       points: [
-        "Akses ke network para millionaire",
-        "Weekly mastermind session dengan top performers",
-        "Exclusive events & business opportunities"
+        "Direct access ke inner circle para millionaire yang biasanya tertutup", 
+        "Weekly mastermind yang akan push potensialmu ke level maksimal",
+        "Premium networking events yang bisa ubah game bisnismu"
       ],
       image: "/6.png"
     },
     {
       title: "Proven Business System",
-      description: "Sistem yang sudah menghasilkan ratusan juta hingga miliaran rupiah untuk member kami. Ready to scale your success?",
+      description: "Dulu aku bingung harus mulai dari mana. Sekarang, aku share sistem yang sudah proven menghasilkan miliaran untuk aku dan member-memberku. Are you ready to join us?",
       points: [
-        "Step-by-step blueprint menuju income 8 digit",
-        "Done-for-you marketing materials", 
-        "Automated income generation system"
+        "Blueprint detail yang aku gunakan untuk capai income 8-9 digit",
+        "Semua tools dan materials sudah disiapkan - tinggal eksekusi",
+        "Sistem autopilot yang terus generate income 24/7"
       ],
       image: "/3.png"
     },
     {
       title: "Expert Mentoring Program",
-      description: "Dibimbing langsung oleh mentor yang sudah membuktikan hasil. Your success is our priority!",
+      description: "Bayangkan punya mentor yang available 24/7, yang sudah pernah ada di posisimu dan berhasil. That's exactly what you'll get! Aku akan guide you personally.",
       points: [
-        "1-on-1 coaching dengan expert",
-        "Daily support group yang aktif 24/7",
-        "Accountability system untuk hasil maksimal"
+        "Personal coaching intensif untuk accelerate progressmu",
+        "Support system 24/7 yang selalu ada saat kamu butuh",
+        "Sistem monitoring yang ensure kamu stay on track"
       ],
       image: "/4.png"
     },
     {
       title: "Fast-Track Implementation",
-      description: "3 Bulan. That is all it takes untuk hasil pertamamu. The time for action is NOW!",
+      description: "Dalam 3 bulan, aku transform dari skeptis jadi sukses. Kalau kamu serius dan follow the system, I guarantee you can do it too. The question is: are you ready?",
       points: [
-        "90-day action plan yang terstruktur",
-        "Weekly progress tracking & optimization",
-        "Guaranteed results with committed action*"
+        "Proven 90-day roadmap to your first success",
+        "Progress tracking yang bikin kamu konsisten",
+        "Real results for committed action-takers*"
       ],
       image: "/5.png"
     }

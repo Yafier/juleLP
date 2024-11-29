@@ -64,9 +64,9 @@ export default function Testimonials() {
       name: "Anita Sulistyo",
       role: "Millionaire Mentor",
       image: "/jule.png",
-      quote: "Sebagai single mom, ini adalah jawaban doaku. Sekarang aku bisa kasih anak-anak pendidikan terbaik sambil punya waktu lebih banyak sama mereka.",
+      quote: "Sebagai ibu rumah tangga, ini adalah jawaban doaku. Sekarang aku bisa kasih anak-anak pendidikan terbaik sambil punya waktu lebih banyak sama mereka.",
       achievement: "Sekarang: Income 150jt/bulan",
-      before: "Sebelumnya: Single Mom & Guru"
+      before: "Sebelumnya: Ibu Rumah Tangga & Guru"
     },
     {
       name: "Ricky Wijaya",

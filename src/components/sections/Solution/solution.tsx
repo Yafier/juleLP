@@ -133,7 +133,7 @@ export default function Solution() {
                 kerja 9-5 dengan gaji UMR, commuting 3 jam setiap hari, dan merasa hidup cuma untuk bayar tagihan.&quot;
               </p>
               <p>
-                &quot;Sebagai single mom, aku punya mimpi besar untuk anakku. Aku ingin dia bisa dapat 
+                &quot;Sebagai seorang ibu, aku punya mimpi besar untuk anakku. Aku ingin dia bisa dapat 
                 pendidikan terbaik dan masa depan cerah. Tapi dengan gaji UMR, mimpi ini rasanya jauh.&quot;
               </p>
             </motion.div>

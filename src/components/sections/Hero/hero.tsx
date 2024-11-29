@@ -48,7 +48,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               custom={1}
-              className="text-sm sm:text-base md:text-lg text-white/90 mb-0 max-w-2xl px-4"
+              className="text-sm sm:text-base md:text-lg text-white/90 mb-0 max-w-2xl px-5"
             >
               Stop wasting your time! Sementara kamu ragu, orang lain sudah melangkah maju. 
               Saatnya raih kebebasan waktu dan penghasilan miliaran per bulan.

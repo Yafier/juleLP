@@ -54,7 +54,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 custom={0}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif mb-1 text-white tracking-tight"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif mb-1 text-white tracking-tight"
               >
                 <span className="font-light italic">The Easiest Way</span>
                 <br />
@@ -67,10 +67,9 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 custom={1}
-                className="text-base sm:text-lg md:text-xl text-white/90 mb-0 max-w-3xl px-5"
-              >
-                Stop wasting your time! Sementara kamu ragu, orang lain sudah melangkah maju. 
-                Saatnya raih kebebasan waktu dan penghasilan miliaran per bulan.
+                className="text-sm sm:text-lg md:text-xl text-white/90 mb-0 max-w-3xl px-5 my-2"
+              > 
+                Mengenalkan sistem bisnis yang berhasil membuat aku dan 500+ orang lainnya to have 8 to 9-digit monthly income.
               </motion.p>
 
               {/* Image Container - Further reduced sizing */}
@@ -82,7 +81,7 @@ export default function Hero() {
               >
                 {/* Main Image - Smaller sizes */}
                 <div className="relative w-full mx-auto
-                  h-[420px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+                  h-[400px] sm:h-[300px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
                 >
                   <Image
                     src="/jule 2.png"

@@ -5,155 +5,200 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation/navigation';
 
-// Animation variants
+// Enhanced animation variants
 const textVariants = {
   hidden: { 
     opacity: 0, 
-    y: 20 
+    y: 30,
+    rotateX: 15
   },
   visible: (custom: number) => ({
     opacity: 1,
     y: 0,
+    rotateX: 0,
     transition: {
-      delay: custom * 0.2,
-      duration: 0.5,
-      ease: "easeOut"
+      delay: custom * 0.3,
+      duration: 1.2,
+      ease: [0.25, 0.1, 0.25, 1],
+      opacity: { duration: 0.8 }
     }
   })
 };
 
-// Image animation variant
 const imageVariants = {
-  hidden: { 
+  hidden: {
     opacity: 0,
-    y: 100,
-    scale: 0.95
+    scale: 1.1,
+    y: 20
   },
   visible: {
     opacity: 1,
-    y: 0,
     scale: 1,
+    y: 0,
     transition: {
-      duration: 0.8,
-      ease: "easeOut"
+      duration: 1.4,
+      ease: [0.25, 0.1, 0.25, 1],
+    }
+  }
+};
+
+const decorativeVariants = {
+  hidden: { 
+    opacity: 0,
+    scale: 0.8,
+    rotate: -5
+  },
+  visible: (custom: number) => ({
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    transition: {
+      delay: custom * 0.2 + 0.5,
+      duration: 1,
+      ease: [0.215, 0.610, 0.355, 1.000]
+    }
+  })
+};
+
+const lineVariants = {
+  hidden: { 
+    width: "0%",
+    opacity: 0
+  },
+  visible: {
+    width: "100%",
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      ease: [0.25, 0.1, 0.25, 1],
     }
   }
 };
 
 export default function Hero() {
   return (
-    <>
+    <div className="relative min-h-screen bg-neutral-100">
       <Navigation />
-      <div className="relative">
-        <motion.section className="h-[75vh] md:min-h-screen flex items-start pt-12 justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 rounded-3xl mx-4 mt-2">
-          <div className="container mx-auto px-4 h-full relative">
-            <div className="flex flex-col items-center text-center max-w-6xl mx-auto h-full">
-              {/* Title */}
-              <motion.h1 
+      
+      <motion.section 
+        className="container mx-auto px-4 py-24"
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Editorial Text */}
+          <motion.div className="space-y-8">
+            <motion.div variants={textVariants} custom={0}>
+              <motion.h2 
+                className="font-serif text-sm tracking-[0.3em] text-neutral-500 mb-4 overflow-hidden"
                 variants={textVariants}
-                initial="hidden"
-                animate="visible"
                 custom={0}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif mb-1 text-white tracking-tight"
               >
-                <span className="font-light italic">The Easiest Way</span>
-                <br />
-                <span className="font-medium">To Increase Your Income</span>
-              </motion.h1>
-
-              {/* Description */}
-              <motion.p 
-                variants={textVariants}
-                initial="hidden"
-                animate="visible"
-                custom={1}
-                className="text-sm sm:text-lg md:text-xl text-white/90 mb-0 max-w-3xl px-5 my-2"
-              > 
-                Mengenalkan sistem bisnis yang berhasil membuat aku dan 500+ orang lainnya to have 8 to 9-digit monthly income.
-              </motion.p>
-
-              {/* Image Container - Further reduced sizing */}
-              <motion.div 
-                variants={imageVariants}
-                initial="hidden"
-                animate="visible"
-                className="absolute bottom-0 left-0 right-0 w-full"
-              >
-                {/* Main Image - Smaller sizes */}
-                <div className="relative w-full mx-auto
-                  h-[400px] sm:h-[300px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+                KISAH INSPIRATIF
+              </motion.h2>
+              <motion.div className="overflow-hidden">
+                <motion.h1 
+                  className="font-serif text-5xl md:text-7xl leading-tight mb-6"
+                  variants={textVariants}
+                  custom={1}
                 >
-                  <Image
-                    src="/jule 2.png"
-                    alt="Hero Image"
-                    fill
-                    className="object-contain object-bottom"
-                    sizes="(max-width: 768px) 100vw,
-                           (max-width: 1200px) 80vw,
-                           70vw"
-                    priority
-                  />
-                </div>
-
-                {/* Popup Messages - Smaller text on mobile */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="absolute left-[10%] top-[35%] sm:top-[40%] bg-white/90 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg max-w-[180px] sm:max-w-[200px] text-left"
-                >
-                  <p className="text-sm sm:text-base md:text-lg font-medium text-blue-900">From Zero to Hero</p>
-                  <p className="text-xs sm:text-sm md:text-base text-blue-600/70">
-                    Started with UMR salary, now generating 8-digit monthly income. Your journey can start here!
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.7 }}
-                  className="absolute right-[10%] top-[60%] sm:top-[70%] bg-white/90 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg max-w-[180px] sm:max-w-[200px] text-left"
-                >
-                  <p className="text-sm sm:text-base md:text-lg font-medium text-blue-900">500+ Success Stories</p>
-                  <p className="text-xs sm:text-sm md:text-base text-blue-600/70">
-                    Join our community of achievers who have transformed their lives. Do not miss out!
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.9 }}
-                  className="hidden md:block absolute left-[15%] bottom-1/3 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] text-left"
-                >
-                  <p className="text-base md:text-lg font-medium text-blue-900">Time Freedom Achieved</p>
-                  <p className="text-sm md:text-base text-blue-600/70">
-                    Built a 7-figure business while having quality time with family. Ready to do the same?
-                  </p>
-                </motion.div>
+                  Perjalanan
+                  <br />
+                  <span className="italic font-light">Menuju Sukses</span>
+                </motion.h1>
               </motion.div>
-            </div>
-          </div>
-        </motion.section>
+            </motion.div>
 
-        {/* Added Quote Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
-          className="text-center mt-6 mb-4 px-4"
-        >
-          <div className="max-w-4xl mx-auto">
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent my-8" />
-            <p className="text-2xl md:text-3xl lg:text-4xl font-serif italic text-blue-600">
-              &quot;Apa yang ada
-              <br />
-              dipikiran aku waktu itu?&quot;
-            </p>
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent my-8" />
+            <motion.div 
+              variants={textVariants} 
+              custom={2}
+              className="space-y-6 text-neutral-700"
+            >
+              <p className="text-lg md:text-xl font-light leading-relaxed">
+                Hai, para pejuang mimpi,
+              </p>
+              <p className="text-lg md:text-xl font-light leading-relaxed">
+                Saya pernah berada di posisi yang sama seperti kamu sekarang. Dari yang awalnya bergaji UMR, hingga akhirnya bisa membangun komunitas dengan 500+ orang successful individuals. Journey ini bukan hanya tentang pertumbuhan finansial—ini tentang transformasi hidup yang meaningful.
+              </p>
+              <p className="text-lg md:text-xl font-light leading-relaxed">
+                Let me be your guide dalam sistem yang sudah terbukti membantu ratusan orang achieve their dreams, sama seperti yang saya alami.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              variants={textVariants} 
+              custom={3}
+              className="pt-6"
+            >
+              <span className="font-serif italic text-2xl text-neutral-600">
+                "Ini saatnya kamu menulis cerita suksesmu sendiri."
+              </span>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Column - Editorial Image */}
+          <div className="relative">
+            <motion.div 
+              variants={imageVariants}
+              className="relative z-10"
+            >
+              <div className="aspect-[2/3] relative">
+                <Image
+                  src="/jule 2.png"
+                  alt="Juliana Parmadi Portrait"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+            </motion.div>
+
+            {/* Enhanced Decorative Elements */}
+            <motion.div
+              variants={decorativeVariants}
+              custom={0}
+              className="absolute -bottom-8 -left-8 w-32 h-32 border-l-2 border-b-2 border-neutral-300"
+            />
+            <motion.div
+              variants={decorativeVariants}
+              custom={1}
+              className="absolute -top-8 -right-8 w-32 h-32 border-t-2 border-r-2 border-neutral-300"
+            />
+            
+            {/* Additional Decorative Elements */}
+            <motion.div
+              variants={decorativeVariants}
+              custom={2}
+              className="absolute -bottom-4 -right-4 w-24 h-24 border-r-2 border-b-2 border-neutral-300/50"
+            />
+            <motion.div
+              variants={decorativeVariants}
+              custom={3}
+              className="absolute -top-4 -left-4 w-24 h-24 border-l-2 border-t-2 border-neutral-300/50"
+            />
           </div>
+        </div>
+
+        {/* Enhanced Editorial Details */}
+        <motion.div className="mt-24 text-center relative">
+          <motion.div 
+            variants={lineVariants}
+            className="h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent my-8"
+          />
+          <motion.p
+            variants={textVariants}
+            custom={4}
+            className="font-serif italic text-2xl text-neutral-600 max-w-2xl mx-auto"
+          >
+            "Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan."
+          </motion.p>
+          <motion.div 
+            variants={lineVariants}
+            className="h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent my-8"
+          />
         </motion.div>
-      </div>
-    </>
+      </motion.section>
+    </div>
   );
 } 

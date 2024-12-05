@@ -1,5 +1,6 @@
-import Problem from "@/components/sections/Problem/problem";
+import HeroFirst from '@/components/sections/Hero-first/page';
 import Hero from '@/components/sections/Hero/hero'
+import Problem from "@/components/sections/Problem/problem";
 import Solution from '@/components/sections/Solution/solution';
 import Navigation from "@/components/Navigation/navigation";
 import Objective from "@/components/sections/Objective/objective";
@@ -14,6 +15,7 @@ import { Cta } from "@/components/sections/Cta/cta";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      <HeroFirst />
       <Hero />
       <Problem />
       <Solution />

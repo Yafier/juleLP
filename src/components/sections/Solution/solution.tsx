@@ -23,6 +23,10 @@ export default function Solution() {
     offset: ["start end", "end start"]
   });
 
+  // Create transforms outside the map callback
+  const tagOpacity = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
+  const titleY = useTransform(scrollYProgress, [0, 0.5], [50, 0]);
+
   const systemSections = [
     {
       point: {
@@ -166,11 +170,7 @@ export default function Solution() {
                     {/* Tag */}
                     <motion.div 
                       style={{
-                        opacity: useTransform(
-                          scrollYProgress,
-                          [0, 0.5],
-                          [0.5, 1]
-                        )
+                        opacity: tagOpacity
                       }}
                       className="mb-auto"
                     >
@@ -183,11 +183,7 @@ export default function Solution() {
                     <div>
                       <motion.h3 
                         style={{
-                          y: useTransform(
-                            scrollYProgress,
-                            [0, 0.5],
-                            [50, 0]
-                          )
+                          y: titleY
                         }}
                         className="text-2xl md:text-3xl font-bold text-white mb-4"
                       >

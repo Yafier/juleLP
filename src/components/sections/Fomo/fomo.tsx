@@ -118,13 +118,13 @@ export default function Fomo() {
             <div className="flex size-full max-w-[1200px] max-h-[400px] items-stretch justify-between">
               <div className="flex flex-col justify-between">
                 <Circle ref={topLeftRef} className="size-20 md:size-32 p-0.5">
-                  <Image src="/3.png" alt="Feature" width={120} height={120} className="rounded-full" />
+                  <Image src="/devina.jpg" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
                 <Circle ref={middleLeftRef} className="size-20 md:size-32 p-0.5">
-                  <Image src="/4.png" alt="Feature" width={120} height={120} className="rounded-full" />
+                  <Image src="/gwen.jpg" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
                 <Circle ref={bottomLeftRef} className="size-20 md:size-32 p-0.5">
-                  <Image src="/5.png" alt="Feature" width={120} height={120} className="rounded-full" />
+                  <Image src="/mariskakarsana.jpg" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
               </div>
 
@@ -134,13 +134,13 @@ export default function Fomo() {
 
               <div className="flex flex-col justify-between">
                 <Circle ref={topRightRef} className="size-20 md:size-32 p-0.5">
-                  <Image src="/6.png" alt="Feature" width={120} height={120} className="rounded-full" />
+                  <Image src="/martateja.jpg" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
                 <Circle ref={middleRightRef} className="size-20 md:size-32 p-0.5">
-                  <Image src="/7.png" alt="Feature" width={120} height={120} className="rounded-full" />
+                  <Image src="/jessica.jpg" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
                 <Circle ref={bottomRightRef} className="size-20 md:size-32 p-0.5">
-                  <Image src="/8.png" alt="Feature" width={120} height={120} className="rounded-full" />
+                  <Image src="/anastasia.jpg" alt="Feature" width={120} height={120} className="rounded-full" />
                 </Circle>
               </div>
             </div>

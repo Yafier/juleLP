@@ -3,61 +3,55 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+// Animation variants
+const textVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut'
+    }
+  }
+};
+
 export default function Solution() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start center", "start start"]
+    offset: ["start end", "end start"]
   });
-
-  // Gradient transition
-  const backgroundColor = useTransform(
-    scrollYProgress,
-    [0, 0.2],
-    [
-      "rgb(255, 255, 255)",
-      "rgb(30, 58, 138)" // Darker blue to match gradient
-    ]
-  );
-
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.5,
-        ease: 'easeOut'
-      }
-    })
-  };
 
   const systemSections = [
     {
       point: {
         title: "MINDSET TRANSFORMATION",
-        description: "Dulu aku juga sama seperti kamu, percaya kalau jalan menuju sukses cuma lewat karir 9-5. Takut ambil risiko bisnis karena mindset 'aman'. But look at me now - dari karyawan biasa jadi entrepreneur dengan passive income jutaan per hari!\n\nLet me share what changed my life with you by joining this community",
+        tag: "BRANDING DIGITAL",
+        description: "Dulu aku juga sama seperti kamu, percaya kalau jalan menuju sukses cuma lewat karir 9-5. Takut ambil risiko bisnis karena mindset 'aman'. But look at me now - dari karyawan biasa jadi entrepreneur dengan passive income jutaan per hari!",
         video: "/4.mp4"
       }
     },
     {
       point: {
         title: "HIGH-VALUE NETWORK",
-        description: "Dulu aku nggak punya network sama sekali. Sekarang? I'm surrounded by successful people yang mendorong aku grow beyond my limits. Let me help you get the same transformation!\n\nWhat you'll get by joining this community is endless.",
+        tag: "INVESTMENT IN FUTURE",
+        description: "Dulu aku nggak punya network sama sekali. Sekarang? I'm surrounded by successful people yang mendorong aku grow beyond my limits. Let me help you get the same transformation!",
         video: "/2.mp4"
       }
     },
     {
       point: {
         title: "PROVEN BUSINESS SYSTEM",
-        description: "From zero business knowledge ke sistem yang menghasilkan miliaran. This is the exact system that changed my life! Dan sekarang udah proven work buat ratusan member.\n\nThe system isn't build for orang terpilih, tapi for everyone who's willing to do more to change their life.",
+        tag: "UNITS COMMUNITY",
+        description: "From zero business knowledge ke sistem yang menghasilkan miliaran. This is the exact system that changed my life! Dan sekarang udah proven work buat ratusan member.",
         video: "/3.mp4"
       }
     },
     {
       point: {
         title: "EXPERT MENTORING",
+        tag: "PERSONAL GROWTH",
         description: "Dulu aku berjuang sendiri tanpa guidance. Until aku join business ini yang provide mentorship yang bener-bener leading with empathy and fire yang ngebuat aku terus semangat. Sekarang? I'm here to be the mentor I wish I had! Your success is my personal mission.",
         video: "/1.mp4"
       }
@@ -65,6 +59,7 @@ export default function Solution() {
     {
       point: {
         title: "BREAKTHROUGH FORMULA",
+        tag: "SUCCESS SYSTEM",
         description: "The exact formula yang transform aku dari staff biasa ke 7-figure entrepreneur. Dari takut sales ke closing deals worth billions! This can be your story too.\n\nI'll share with you all you need to get the same result.",
         video: "/5.mp4"
       }
@@ -72,10 +67,9 @@ export default function Solution() {
   ];
 
   return (
-    <motion.section 
+    <section 
       ref={sectionRef}
-      style={{ backgroundColor }}
-      className="py-12 md:py-20 transition-colors duration-500 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600"
+      className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 py-24"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -139,133 +133,114 @@ export default function Solution() {
             </motion.div>
           </div>
 
-          {/* System Section */}
-          <div className="mb-16">
-            <motion.div className="text-center mb-16">
-              <motion.h3
-                variants={textVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-2xl sm:text-3xl md:text-4xl font-serif mb-6 tracking-tight text-white"
-              >
-                <span className="font-light italic">The System That</span>
-                <br />
-                <span className="font-medium">Changed My Life</span>
-              </motion.h3>
-              
-              {/* Added decorative line */}
-              <div className="w-24 h-px bg-white/30 mx-auto"></div>
-            </motion.div>
-
-            {/* Points and Video Sections */}
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {systemSections.map((section, index) => (
               <motion.div
                 key={index}
-                className="mb-16 last:mb-0"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.8,
+                  delay: index * 0.2,
+                  ease: [0.25, 0.1, 0.25, 1]
+                }}
+                className="relative group"
               >
-                <div className="rounded-xl overflow-hidden bg-white shadow-lg">
-                  {/* Video Container */}
-                  <motion.div
-                    variants={textVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="w-full aspect-video"
+                {/* Card */}
+                <div className="relative aspect-[3/4] bg-black/30 backdrop-blur-sm 
+                              rounded-lg overflow-hidden border border-white/10">
+                  {/* Video Background */}
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover opacity-50 
+                             scale-105 group-hover:scale-100 transition-transform duration-700"
                   >
-                    <video 
-                      className="w-full h-full object-cover"
-                      autoPlay 
-                      loop 
-                      muted 
-                      playsInline
+                    <source src={section.point.video} type="video/mp4" />
+                  </video>
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 p-8 flex flex-col">
+                    {/* Tag */}
+                    <motion.div 
+                      style={{
+                        opacity: useTransform(
+                          scrollYProgress,
+                          [0, 0.5],
+                          [0.5, 1]
+                        )
+                      }}
+                      className="mb-auto"
                     >
-                      <source src={section.point.video} type="video/mp4" />
-                    </video>
-                  </motion.div>
+                      <span className="text-xs tracking-[0.3em] text-white/70 uppercase">
+                        {section.point.tag}
+                      </span>
+                    </motion.div>
 
-                  {/* Text Container */}
-                  <motion.div
-                    variants={textVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="w-full p-6"
-                  >
-                    <h4 className="text-lg md:text-xl font-serif font-bold text-blue-900 mb-2">
-                      {section.point.title}
-                    </h4>
-                    <div className="h-px bg-blue-100 my-2" />
-                    <p className="text-sm text-blue-600/70">
-                      {section.point.description}
-                    </p>
-                  </motion.div>
+                    {/* Title & Description */}
+                    <div>
+                      <motion.h3 
+                        style={{
+                          y: useTransform(
+                            scrollYProgress,
+                            [0, 0.5],
+                            [50, 0]
+                          )
+                        }}
+                        className="text-2xl md:text-3xl font-bold text-white mb-4"
+                      >
+                        {section.point.title}
+                      </motion.h3>
+
+                      <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                        className="text-white/80 text-sm leading-relaxed
+                                 transform translate-y-8 group-hover:translate-y-0 
+                                 opacity-0 group-hover:opacity-100 transition-all duration-500"
+                      >
+                        {section.point.description}
+                      </motion.p>
+                    </div>
+                  </div>
+
+                  {/* Card Number */}
+                  <div className="absolute top-4 right-4">
+                    <span className="text-sm text-white/40 font-mono">
+                      {`0${index + 1}`}
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Results Section */}
-          <div className="mt-24">
-            <motion.h3 
-              variants={textVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="text-2xl sm:text-3xl md:text-4xl font-serif mb-12 tracking-tight text-center text-white"
-            >
-              <span className="font-light italic">Do not Let Fear Hold You Back</span>
-              <br />
-              <span className="font-medium">Join Our Success Stories</span>
-            </motion.h3>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mb-16">
-              {[
-                { number: '500+', text: 'Millionaire Members' },
-                { number: '1000+', text: 'Lives Changed' },
-                { number: '100+', text: 'Monthly Success Stories' },
-                { number: '50+', text: 'Business Partners' },
-                { number: '24/7', text: 'Community Support' },
-                { number: '∞', text: 'Growth Potential' },
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  variants={textVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  custom={index}
-                  className="text-center p-2"
-                >
-                  <div className="text-xl md:text-2xl font-medium text-white mb-1">
-                    {stat.number}
-                  </div>
-                  <div className="text-white/80 text-xs md:text-sm">
-                    {stat.text}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* YouTube Video Embed */}
-            <motion.div
-              variants={textVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="aspect-video rounded-xl overflow-hidden"
-            >
-              <iframe
-                src="https://www.youtube.com/embed/8ARQSMjX26s"
-                title="Success Story Video"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </motion.div>
-          </div>
+          {/* Stats Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="mt-32 grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          >
+            {[
+              { number: '500+', text: 'Millionaire Members' },
+              { number: '1000+', text: 'Lives Changed' },
+              { number: '100+', text: 'Monthly Success Stories' },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-white/60 text-sm">
+                  {stat.text}
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 } 

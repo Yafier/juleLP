@@ -61,7 +61,7 @@ const decorativeVariants = {
 };
 
 const lineVariants = {
-  hidden: { 
+  hidden: {
     width: "0%",
     opacity: 0
   },
@@ -131,7 +131,7 @@ export default function Hero() {
               className="pt-6"
             >
               <span className="font-serif italic text-2xl text-neutral-600">
-                "Ini saatnya kamu menulis cerita suksesmu sendiri."
+                &ldquo;Ini saatnya kamu menulis cerita suksesmu sendiri.&rdquo;
               </span>
             </motion.div>
           </motion.div>
@@ -191,7 +191,7 @@ export default function Hero() {
             custom={4}
             className="font-serif italic text-2xl text-neutral-600 max-w-2xl mx-auto"
           >
-            "Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan."
+            &ldquo;Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan.&rdquo;
           </motion.p>
           <motion.div 
             variants={lineVariants}

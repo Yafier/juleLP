@@ -142,8 +142,8 @@ export default function Problem() {
             Ready for a change?
           </h3>
           <p className="text-neutral-600 leading-relaxed italic">
-            "Most people fail in life not because they aim too high and miss,
-            but because they aim too low and hit."
+            &ldquo;Most people fail in life not because they aim too high and miss,
+            but because they aim too low and hit.&rdquo;
           </p>
           <cite className="text-sm text-neutral-500 mt-4 block">
             — Iman Gadzhi
